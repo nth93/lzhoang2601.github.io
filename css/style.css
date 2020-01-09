@@ -687,6 +687,67 @@ body.mobile-nav-active #mobile-nav-toggle i {
   background: #ddd;
 }
 
+#ytb {
+    background: transparent url(../img/ytb.jpg) no-repeat center top fixed;
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
+  #ytb .block-blog {
+    margin-bottom: 30px;
+  }
+}
+
+#ytb .block-blog img {
+  width: 100%;
+}
+
+#ytb .block-blog .content-blog {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  min-height: 125px;
+  padding: 20px 10px;
+  width: 100%;
+}
+
+#ytb .block-blog .content-blog h4 {
+  line-height: 24px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-weight: normal;
+  letter-spacing: 0;
+  font-size: 16px;
+}
+
+#ytb .block-blog .content-blog h4 a {
+  color: #555;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#ytb .block-blog .content-blog h4 a:hover {
+  color: #71c55d;
+}
+
+#ytb .block-blog .content-blog > span {
+  float: left;
+  font-size: 12px;
+}
+
+#ytb .block-blog .content-blog a.readmore {
+  color: #505050;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+#ytb .block-blog .content-blog a.readmore:hover {
+  color: #71c55d;
+}
+
 /* Contact Section
 --------------------------------*/
 #contact {
