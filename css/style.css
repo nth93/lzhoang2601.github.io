@@ -748,6 +748,48 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #71c55d;
 }
 
+#ytb .btn-ytb {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 11px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  border: 2px solid #71c55d;
+  background: #fff;
+  color: #71c55d;
+  text-decoration: none;
+}
+
+#ytb .btn-get-started:hover {
+  background: #71c55d;
+  color: #fff;
+}
+
+#ytb .btns a {
+  color: #555;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 4px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+@media (max-width: 575px) {
+  #ytb .btns a {
+    margin: 4px 8px;
+  }
+}
+
+#ytb .btns a:hover {
+  color: #71c55d;
+}
+
 /* Contact Section
 --------------------------------*/
 #contact {
