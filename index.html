@@ -236,7 +236,7 @@
 <p><a href="https://apps.apple.com/us/app/macos-catalina/id1466841314?ls=1&amp;mt=12">macOS Catalina</a>,
    <a href="https://itunes.apple.com/us/app/macos-mojave/id1398502828?ls=1&amp;mt=12">macOS Mojave</a>,
    <a href="https://itunes.apple.com/us/app/macos-high-sierra/id1246284741?ls=1&amp;mt=12">macOS High Sierra</a>,
-   <a href="https://itunes.apple.com/us/app/macos-sierra/id1127487414?ls=1&amp;mt=12">macOS Sierra</a>,
+   <a href="https://itunes.apple.com/us/app/macos-sierra/id1127487414?ls=1&amp;mt=12">macOS Sierra</a>
 
 <h2 id="windows">Windows</h2>
 
@@ -323,24 +323,32 @@
       </div>
       
           <div class="container-lg px-3 my-5 markdown-body">
+              <h3>Nếu có yêu cầu thêm patch vào Clover/APCI/patched thì bắt buộc cần save dưới dạng .aml và các patch cho config.plist đã có đầy đủ ở config_master.plist nhé!</h3>
 
-<h2 id="als0-cảm-biến-ánh-sáng">ALS0 (Cảm biến ánh sáng)</h2>
-
-<h2 id="battery-các-patch-pin-sẵn-cho-laptop">Battery (Các patch pin sẵn cho laptop)</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Xác định SSDT patch pin cho laptop của mình rồi save vào Clover/ACPI/patched dưới dạng .aml
+<h2 id="als0">ALS0 (Cảm biến ánh sáng)</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "ACPI0008" trong DSDT của máy bạn
+2. Nếu có, bạn save SSDT-ALSD.dsl vào Clover/ACPI/patched và thêm tiếp patch có đầu "(ALS0)..." vào config.plist/ACPI/DSDT/Patches của bạn.
+   Nếu tìm mà không có, bạn chỉ việc save SSDT-ALS0.dsl vào Clover/APCI/patched là được
 </code></pre></div></div>
 
-<h2 id="brightkey-hotkey-tăng-giảm-độ-sáng-màn-hình">BrightKey (Hotkey tăng giảm độ sáng màn hình)</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cách làm các bạn xem ở bài viết hoặc video sau
+<h2 id="battery">Battery (Các patch pin sẵn cho laptop)</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Chọn đúng SSDT patch pin cho laptop của mình rồi save vào Clover/ACPI/patched dưới dạng .aml.
+Rồi thêm tiếp các patch từ config_(tên máy).plist vào config.plist/ACPI/DSDT/Patches của bạn.
+Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hãy patch thủ công theo <a href="https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/">guide</a>
+</code></pre></div></div>
+
+<h2 id="brightkey">BrightKey (Hotkey tăng giảm độ sáng màn hình)</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cách làm các bạn xem ở <a href="https://www.lzhoang2601.github.io/">video</a> sau
 </code></pre></div></div>
 
 <h2 id="ec">EC</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "PNP0C09" trong DSDT của máy bạn，nếu tên bộ điều khiển EC là EC hay H_EC, ECDV thì đổi tên thành EC0 qua config.plist/ACPI/DSDT/Patches。
-2. Thêm SSDT-EC vào Clover/ACPI/patched để tạo EC ảo điều khiển nguồn USB
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "PNP0C09" trong DSDT của máy bạn
+    2.Nếu nhận lại Device (EC) hay H_EC, ECDV thì thêm patch phù hợp vào config.plist/ACPI/DSDT/Patches。Các patch bạn có thể tìm trong config_master.plist
+3. Thêm SSDT-EC vào Clover/ACPI/patched để tạo EC ảo điều khiển nguồn USB
 </code></pre></div></div>
 
 <h2 id="ecdt">ECDT</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mở ECDT.aml trong Clover/ACPI/origin。
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mở ECDT.aml trong Clover/ACPI/origin (Nếu không có SSDT-ECDT.aml, bạn bỏ qua bước này, quay lại bước <a href="https://www.lzhoang2601.github.io/#ec">EC</a> rename bộ điều khiển EC của bạn về tên EC với patch có trong config_master.plist)
 2. Kiểm tra phần Namepatch, chuyển LPC thành LPCB, EC hay H_EC,ECDV thành ECO。
 3. Xoá hết phần Raw Table Data... đi
 4. Save file ECDT.aml vừa chỉnh vào Clover/ACPI/patched
@@ -368,7 +376,7 @@ Còn nếu dùng OpenCore Bootloader, các bạn làm như sau
 </code></pre></div></div>
 
 <h2 id="pnlf-chỉnh-độ-sáng-màn-hình-laptop">PNLF (Chỉnh độ sáng màn hình laptop)</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để rõ hơn bạn có thể xem [bài viết](https://hackintosh.vn/su-dung-clover-de-thuc-hien-patch-nong-apci) hoặc [video]()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để rõ hơn bạn có thể xem <a href="https://hackintosh.vn/su-dung-clover-de-thuc-hien-patch-nong-apci">bài viết</a> hoặc <a href="https://www.youtube.com/watch?v=pYjL9qlR83k">video</a> sau
 </code></pre></div></div>
 
 <h2 id="ptswak">PTSWAK</h2>
