@@ -252,7 +252,7 @@ span {
   margin-bottom: 30px;
 }
 
-#hero .btn-get-started {
+#hero .btn-git {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -262,14 +262,14 @@ span {
   padding: 11px 36px;
   border-radius: 50px;
   transition: 0.5s;
-  margin-bottom: 30px;
+  margin-bottom: 620px;
   border: 2px solid #71c55d;
   background: #fff;
   color: #71c55d;
   text-decoration: none;
 }
 
-#hero .btn-get-started:hover {
+#hero .btn-git:hover {
   background: #71c55d;
   color: #fff;
 }

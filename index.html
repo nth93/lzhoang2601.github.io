@@ -47,6 +47,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#ytb">My Youtube Channel</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#CreateUSBmacOSInstall">CreateUSBmacOSInstall</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -215,6 +216,100 @@
       </div>
     </div>
   </section><!-- #contact -->
+
+  <section id="CreateUSBmacOSInstall" class="padd-section wow fadeInUp">
+      
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>CreateUSBmacOSInstall</h2>
+        </div>
+      </div>
+      
+    <link href="css/stylerepo.css" rel="stylesheet">
+
+    <div class="container-lg px-3 my-5 markdown-body">
+<h2 id="macos">macOS</h2>
+
+<h5 id="hackintoshfiles"><a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/LiZ/HackintoshFileS.zip">HackintoshFileS</a></h5>
+
+<p><a href="https://apps.apple.com/us/app/macos-catalina/id1466841314?ls=1&amp;mt=12">macOS Catalina</a>,
+   <a href="https://itunes.apple.com/us/app/macos-mojave/id1398502828?ls=1&amp;mt=12">macOS Mojave</a>,
+   <a href="https://itunes.apple.com/us/app/macos-high-sierra/id1246284741?ls=1&amp;mt=12">macOS High Sierra</a>,
+   <a href="https://itunes.apple.com/us/app/macos-sierra/id1127487414?ls=1&amp;mt=12">macOS Sierra</a>,
+
+<h2 id="windows">Windows</h2>
+
+<h4 id="tất-cả-bộ-cài-sau-đều-là-bộ-cài-vanila-nhằm-phục-vụ-cho-việc-tạo-usb-cài-đặt-hackintosh-trên-windows">Tất cả bộ cài sau đều là bộ cài Vanila, nhằm phục vụ cho việc tạo USB cài đặt Hackintosh trên Windows.</h4>
+
+<h5 id="createbootablemacosinstall"><a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/ZTools/CreateBootablemacOSInstall_Ver2.1.zip">CreateBootablemacOSInstall</a></h5>
+
+<p><a href="https://drive.google.com/open?id=1a-v9lcSGbYLwpv_dYqynhn6aUjesInFW">macOS Catalina</a>, <a href="https://drive.google.com/open?id=1P1__REcAH6NwRzVbFhuWw9HJEJQ6cgFK">macOS Mojave</a></p>
+
+<h2 id="create-clover">Create <a href="https://github.com/Dids/clover-builder/releases">Clover</a></h2>
+
+<h4 id="config"><a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/tag/Config">Config</a></h4>
+
+<h4 id="kexts">Kexts</h4>
+
+<ul>
+  <li>
+    <p>Bắt buộc:</p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads/">FakeSMC.kext</a>: Nhằm giả lập hệ thống cảm biến giống RealMac. Hiện tại đã có thêm kext VirualSMC có tác dụng giống với FakeSMC, các bạn có thể thay nhưng đừng thêm 2 kext này vào 1 lần tránh xung đột nhé</p>
+
+    <p><a href="https://github.com/acidanthera/Lilu/releases">Lilu.kext</a>: Giúp vá mềm on-the-fly cho nhiều kext mà không cần đụng tới kext gốc</p>
+
+    <p><a href="https://github.com/acidanthera/WhateverGreen/releases">WhateverGreen.kext</a>: Là plugin của Lilu, giải quyết các vấn đề của card đồ hoạ</p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/">USBInjectAll.kext</a>: Nhằm fix cổng USB</p>
+  </li>
+  <li>
+    <p>Tuỳ thuộc vào phần cứng:</p>
+
+    <p><a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/LiZ/NullCPUPowerManagement.zip">NullCPUPowerManagement.kext</a>: Chỉ cần nếu là CPU Pentium hay CPU Ivy Bridge và cũ hơn khi chưa được patch DSDT hay SSDT quản lí điện năng</p>
+
+    <p><a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/LiZ/AtherosE2200Ethernet.kext.zip">AtherosE2200Ethernet.kext</a>: Nhằm kích hoạt card LAN của Atheros</p>
+
+    <p><a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/LiZ/IntelMausiEthernet.kext.zip">IntelMausiEthernet.kext</a>: Nhằm kích hoạt card LAN của Intel</p>
+
+    <p><a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/LiZ/RealtekRTL8111.kext.zip">RealtekRTL8111.kext</a>: Nhằm kích hoạt card LAN của Realtek</p>
+
+    <p><a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/LiZ/RealtekRTL8100.kext.zip">RealtekRTL8100.kext</a>: Nhằm kích hoạt card LAN của Realtek</p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/">VoodooPS2Controller.kext</a>: Kext dành cho bàn phím, chuột và trackpad PS2. PC thường không cần đến kext này</p>
+
+    <p><a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/LiZ/SATA-unsupported.kext.zip">SATA-unsupported.kext</a>: Nếu bạn đã qua bước khổ nhất khi cài Hackintosh mà không thấy ổ cứng SATA đâu thì hãy thêm kext này</p>
+
+    <p><a href="https://github.com/RehabMan/OS-X-USB-Inject-All">XHCI-unsupport.kext</a> Chỉ dùng với các chipset đặc biệt như X79/X99/X299/X399</p>
+  </li>
+  <li>
+    <p>Hoàn thiện Hackintosh:</p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/">ACPIBaterryManager.kext</a>: Giúp hiện thỉ phần trăm pin trên laptop (cần patch DSDT)</p>
+
+    <p><a href="https://github.com/acidanthera/AppleALC/releases">AppleALC.kext</a>: Giúp kích hoạt âm thanh (cần layout-id phù hợp, kext lilu)</p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads/">BrcmPatchRAM2.kext</a>: Nhằm kích hoạt Bluetooth của Broadcom (cần FirmwareData nếu cài vào C/K/O hay FirmwareRepo nếu cài vào L/E hoặc S/L/E)</p>
+
+    <p><a href="https://github.com/acidanthera/BT4LEContinuityFixup/releases">BT4LEContinuitilyFixup.kext</a>: Nhằm kích hoạt Airdrop, Handoff, Contiuntily, Hotspot cho các card Bluetooth giống với card Bluetooth mà Apple đã sử dụng</p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/">CodecCommander.kext</a>: Giúp fix lỗi mất âm thanh sau khi sleep và tai nghe bị rè trên laptop</p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/">FakeCPIID.kext</a>: Cho phép hỗ trợ cho CPU Intel trên các phiên bản macOS trước đó không hỗ trợ CPU đó bằng cách giả vờ là CPU được hỗ trợ</p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/">FakeCPIID_BCM57XX_as_BCM57765.kext</a>: Nhằm fake một số card LAN của Broadcom để được native (cần kext FakeCPIID đi kèm)</p>
+
+    <p><a href="https://bitbucket.org/RehabMan/applebacklightfixup/downloads/">AppleBacklightFixup.kext</a>: Giúp chỉnh độ sáng màn hình trên laptop <a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/Patch/Instrument.EC.Queries.txt">InstrumentECQueries</a></p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-acpi-debug/downloads/">ACPIDebug.kext</a>: Giúp theo dõi các biến và đường dẫn thực thi từ mã DSDT/SSDT <a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/Patch/Hotkeys.Brightness.Patch.txt">HotkeysBrightnessPatch</a></p>
+
+    <p><a href="https://bitbucket.org/RehabMan/os-x-generic-usb3/downloads/">GenericUSBXHCI.kext</a>: Nhằm fix cổng USB 3.0</p>
+  </li>
+</ul>
+      
+    </div>
+
+  </section>
 
   <!--==========================
     Footer
