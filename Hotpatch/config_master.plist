@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ACPI</key>
+	<dict>
+		<key>DSDT</key>
+		<dict>
+			<key>Patches</key>
+			<array>
+				<dict>
+					<key>Comment</key>
+					<string>ALSD._STA to ALSD.XSTA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1NUQQ==</data>
+					<key>Replace</key>
+					<data>WFNUQQ==</data>
+					<key>TgtBridge</key>
+					<data>QUxTRA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(BrightKey) _Q0E to XQ0E</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1EwRQ==</data>
+					<key>Replace</key>
+					<data>WFEwRQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(BrightKey) _Q0F to XQ0F</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1EwRg==</data>
+					<key>Replace</key>
+					<data>WFEwRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(EC)change EC to EC0</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUNfXw==</data>
+					<key>Replace</key>
+					<data>RUMwXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(EC)change H_EC to EC0</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>SF9FQw==</data>
+					<key>Replace</key>
+					<data>RUMwXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(EC) ECDV to EC0</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUNEVg==</data>
+					<key>Replace</key>
+					<data>RUMwXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(IMEI) HECI to IMEI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>SEVDSQ==</data>
+					<key>Replace</key>
+					<data>SU1FSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(IMEI) MEI to IMEI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>TUVJXw==</data>
+					<key>Replace</key>
+					<data>SU1FSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(I2C) _CRS to XCRS</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>X0NSUw==</data>
+					<key>Replace</key>
+					<data>WENSUw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(I2C) _STA to XSTA</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>X1NUQQ==</data>
+					<key>Replace</key>
+					<data>WFNUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(I2C) USTP to XSTP</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>VVNUUAg=</data>
+					<key>Replace</key>
+					<data>WFNUUAg=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(I2C) SSCN to XSCN</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U1NDTg==</data>
+					<key>Replace</key>
+					<data>WFNDTg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(I2C) FMCN to XMCN</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>Rk1DTg==</data>
+					<key>Replace</key>
+					<data>WE1DTg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Thinkpad-RMCF) KBD_ to PS2K</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>S0JDXw==</data>
+					<key>Replace</key>
+					<data>UFMySw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(LPC) LPC to LPCB</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>TFBDXw==</data>
+					<key>Replace</key>
+					<data>TFBDQg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(PTSWAK) Method(_PTS,1,N) to ZPTS</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BUUwE=</data>
+					<key>Replace</key>
+					<data>WlBUUwE=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(PTSWAK) Method(_PTS,1,S) to ZPTS</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BUUwk=</data>
+					<key>Replace</key>
+					<data>WlBUUwk=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(PTSWAK) Method(_WAK,1,N) to ZWAK</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1dBSwE=</data>
+					<key>Replace</key>
+					<data>WldBSwE=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(PTSWAK) Method(_WAK,1,S) to ZWAK</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1dBSwk=</data>
+					<key>Replace</key>
+					<data>WldBSwk=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) EHC1 to EH01</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUhDMQ==</data>
+					<key>Replace</key>
+					<data>RUgwMQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) EHC2 to EH02</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUhDMg==</data>
+					<key>Replace</key>
+					<data>RUgwMg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) EUSB to EH01</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RVVTQg==</data>
+					<key>Replace</key>
+					<data>RUgwMQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) USBE to EH02</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>VVNCRQ==</data>
+					<key>Replace</key>
+					<data>RUgwMg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) Method(XWAK,0,N) to ZWAK</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>WFdBSwA=</data>
+					<key>Replace</key>
+					<data>WldBSwA=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) Method(XWAK,0,S) to ZWAK</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>WFdBSwg=</data>
+					<key>Replace</key>
+					<data>WldBSwg=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) Method(XSEL,0,N) to XSEZ</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>WFNFTAA=</data>
+					<key>Replace</key>
+					<data>WFNFWgA=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) Method(XSEL,0,S) to XSEZ</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>WFNFTAg=</data>
+					<key>Replace</key>
+					<data>WFNFWgg=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) Method(ESEL,0,N) to ESEZ</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RVNFTAA=</data>
+					<key>Replace</key>
+					<data>RVNFWgA=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(USB) Method(ESEL,0,S) to ESEZ</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RVNFTAg=</data>
+					<key>Replace</key>
+					<data>RVNFWgg=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) EH01:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>RUgwMQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) EH02:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>RUgwMg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) XHC:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>WEhDXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) XDCI:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>WERDSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) HDEF:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>SERFRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) HDAS:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>SERBUw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) AZAL:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>QVpBTA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) GLAN:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>R0xBTg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) IGBE:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>SUdCRQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) CNVW:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+					<key>TgtBridge</key>
+					<data>Q05WVw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) Scope:EH01:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1NCX1BDSTBFSEMxFC1fUFJXAA==</data>
+					<key>Replace</key>
+					<data>X1NCX1BDSTBFSEMxFC1YUFJXAA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) Scope:EH02:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1NCX1BDSTBFSEMyFC1fUFJXAA==</data>
+					<key>Replace</key>
+					<data>X1NCX1BDSTBFSEMyFC1YUFJXAA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Wake) Scope:XHC:_PRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1NCX1BDSTBYSENfFC1fUFJXAA==</data>
+					<key>Replace</key>
+					<data>X1NCX1BDSTBYSENfFC1YUFJXAA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(XOSI) OSID to XSID</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>T1NJRA==</data>
+					<key>Replace</key>
+					<data>WFNJRA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(XOSI) _OSI to XOSI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X09TSQ==</data>
+					<key>Replace</key>
+					<data>WE9TSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(SleepKey)_Q13 to XQ13(TP-FnF4)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1ExMw==</data>
+					<key>Replace</key>
+					<data>WFExMw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change APSS to APXX</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>QVBTUw==</data>
+					<key>Replace</key>
+					<data>QVBYWA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _DSM to XDSM</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X0RTTQ==</data>
+					<key>Replace</key>
+					<data>WERTTQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R0ZYMA==</data>
+					<key>Replace</key>
+					<data>SUdQVQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change PCI0.VID to IGPU #1 (Thinkpad), optionally pair with SSDT-IGPU.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>UENJMFZJRF8=</data>
+					<key>Replace</key>
+					<data>UENJMElHUFU=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change PCI0.VID to IGPU #2 (Thinkpad), optionally pair with SSDT-IGPU.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>VklEXwhfQURSDAAAAgA=</data>
+					<key>Replace</key>
+					<data>SUdQVQhfQURSDAAAAgA=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change B0D3 to HDAU, optionally pair with SSDT-HDAU.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>QjBEMw==</data>
+					<key>Replace</key>
+					<data>SERBVQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HDAS to HDEF, optionally pair with SSDT-HDEF.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>SERBUw==</data>
+					<key>Replace</key>
+					<data>SERFRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change AZAL to HDEF, optionally pair with SSDT-HDEF.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>QVpBTA==</data>
+					<key>Replace</key>
+					<data>SERFRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SAT0 to SATA, optionally pair with SSDT-SATA.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U0FUMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R1BSVwI=</data>
+					<key>Replace</key>
+					<data>WFBSVwI=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(UPRW,2,N) to XPRW, pair with SSDT-UPRW.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>VVBSVwpwEg==</data>
+					<key>Replace</key>
+					<data>WFBSVwpwEg==</data>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>KernelAndKextPatches</key>
+	<dict>
+		<key>KextsToPatch</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>alpm I/O error</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>QGACAA==</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleAHCIPort</string>
+				<key>Replace</key>
+				<data>AAAAAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>EXTERNAL ICONS PATCH</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>RXh0ZXJuYWw=</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleAHCIPort</string>
+				<key>Replace</key>
+				<data>SW50ZXJuYWw=</data>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

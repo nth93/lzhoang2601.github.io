@@ -1,0 +1,8 @@
+*******
+I、Cách thực hiện
+1 Mở ECDT.aml trong Clover/ACPI/origin。
+2 Kiểm tra phần Namepatch, chuyển LPC thành LPCB, EC hay H_EC,ECDV thành ECO。
+3 Xoá hết phần Raw Table Data... đi 
+4 Save file ECDT.aml vừa chỉnh vào Clover/ACPI/patched
+5 Thêm ECDT vào config.plist/ACPI/Drop Table
+=======
