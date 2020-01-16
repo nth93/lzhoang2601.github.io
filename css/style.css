@@ -185,24 +185,24 @@ span {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# home Section
 --------------------------------------------------------------*/
-#hero {
+#home {
   width: 100%;
   height: calc(100vh - 40px);
-  background: url(../img/hero-bg.png) center bottom no-repeat;
+  background: url(../img/home-bg.png) center bottom no-repeat;
   background-size: 100%;
   position: relative;
   margin-top: 40px;
 }
 
 @media (min-width: 1025px) {
-  #hero {
+  #home {
     background-attachment: fixed;
   }
 }
 
-#hero .hero-container {
+#home .home-container {
   position: absolute;
   bottom: 0;
   top: 0;
@@ -215,7 +215,7 @@ span {
   text-align: center;
 }
 
-#hero h1 {
+#home h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
@@ -225,13 +225,13 @@ span {
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
+  #home h1 {
     font-size: 28px;
     line-height: 36px;
   }
 }
 
-#hero h2 {
+#home h2 {
   color: #777;
   margin-bottom: 30px;
   font-size: 20px;
@@ -240,19 +240,19 @@ span {
 }
 
 @media (max-width: 768px) {
-  #hero h2 {
+  #home h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
 }
 
-#hero img {
+#home img {
   max-width: 95%;
   margin-bottom: 30px;
 }
 
-#hero .btn-git {
+#home .btn-git {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -269,12 +269,12 @@ span {
   text-decoration: none;
 }
 
-#hero .btn-git:hover {
+#home .btn-git:hover {
   background: #71c55d;
   color: #fff;
 }
 
-#hero .btns a {
+#home .btns a {
   color: #555;
   font-size: 11px;
   font-weight: 600;
@@ -285,12 +285,12 @@ span {
 }
 
 @media (max-width: 575px) {
-  #hero .btns a {
+  #home .btns a {
     margin: 4px 8px;
   }
 }
 
-#hero .btns a:hover {
+#home .btns a:hover {
   color: #71c55d;
 }
 
