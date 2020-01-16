@@ -323,7 +323,7 @@
       </div>
       
           <div class="container-lg px-3 my-5 markdown-body">
-              <h3>Nếu có yêu cầu thêm patch vào Clover/APCI/patched thì bắt buộc cần save dưới dạng .aml và các patch cho config.plist đã có đầy đủ ở config_master.plist nhé!</h3>
+              <h3>Nếu có yêu cầu thêm patch vào Clover/APCI/patched thì bắt buộc cần save    và các patch cho config.plist đã có đầy đủ ở config_master.plist(trừ Battery) nhé!</h3>
 
 <h2 id="als0">ALS0 (Cảm biến ánh sáng)</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "ACPI0008" trong DSDT của máy bạn
@@ -332,7 +332,7 @@
 </code></pre></div></div>
 
 <h2 id="battery">Battery (Các patch pin sẵn cho laptop)</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Chọn đúng SSDT patch pin cho laptop của mình rồi save vào Clover/ACPI/patched dưới dạng .aml.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Chọn đúng SSDT patch pin cho laptop của mình rồi save vào Clover/ACPI/patched   .
 Rồi thêm tiếp các patch từ config_(tên máy).plist vào config.plist/ACPI/DSDT/Patches của bạn.
 Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hãy patch thủ công theo <a href="https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/">guide</a>
 </code></pre></div></div>
@@ -343,12 +343,12 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 
 <h2 id="ec">EC</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "PNP0C09" trong DSDT của máy bạn
-    2.Nếu nhận lại Device (EC) hay H_EC, ECDV thì thêm patch phù hợp vào config.plist/ACPI/DSDT/Patches。Các patch bạn có thể tìm trong config_master.plist
+    2.Nếu nhận lại Device (EC) hay H_EC, ECDV thì xác định rồi thêm patch phù hợp vào config.plist/ACPI/DSDT/Patches
 3. Thêm SSDT-EC vào Clover/ACPI/patched để tạo EC ảo điều khiển nguồn USB
 </code></pre></div></div>
 
 <h2 id="ecdt">ECDT</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mở ECDT.aml trong Clover/ACPI/origin (Nếu không có SSDT-ECDT.aml, bạn bỏ qua bước này, quay lại bước <a href="https://www.lzhoang2601.github.io/#ec">EC</a> rename bộ điều khiển EC của bạn về tên EC với patch có trong config_master.plist)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mở ECDT.aml trong Clover/ACPI/origin (Nếu không có SSDT-ECDT.aml, bạn bỏ qua bước này, quay lại bước <a href="https://www.lzhoang2601.github.io/#ec">EC</a> rename bộ điều khiển EC của bạn về tên EC)
 2. Kiểm tra phần Namepatch, chuyển LPC thành LPCB, EC hay H_EC,ECDV thành ECO。
 3. Xoá hết phần Raw Table Data... đi
 4. Save file ECDT.aml vừa chỉnh vào Clover/ACPI/patched
@@ -356,16 +356,16 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 </code></pre></div></div>
 
 <h2 id="imei">IMEI</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save SSDT-IMEI.dsl vào Clover/APCI/patched dưới dạng .aml với các máy dùng CPU Sandy Brigde, Ivy Brigde
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save SSDT-IMEI.dsl vào Clover/APCI/patched với các máy dùng CPU Sandy Brigde, Ivy Brigde
 </code></pre></div></div>
 
 <h2 id="lpc">LPC</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save SSDT-LPC.dsl vào Clover/APCI/patched dưới dạng .aml với các máy dùng CPU Skylake trở về trước
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save SSDT-LPC.dsl vào Clover/APCI/patched với các máy dùng CPU Skylake trở về trước
 </code></pre></div></div>
 
 <h2 id="nullethernet-tạo-1-lan-ảo">NullEthernet (Tạo 1 Lan ảo)</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Thêm NullEthernet.kext và NullEthernetInjector.kext vào CKO
-2. Save SSDT-LPC.dsl vào Clover/APCI/patched dưới dạng .aml
+2. Save SSDT-LPC.dsl vào Clover/APCI/patched
 </code></pre></div></div>
 
 <h2 id="plug">PLUG</h2>
@@ -380,7 +380,7 @@ Còn nếu dùng OpenCore Bootloader, các bạn làm như sau
 </code></pre></div></div>
 
 <h2 id="ptswak">PTSWAK</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save file PTSWAK.dsl vào Clover/ACPI/patched dưới dạng .aml
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save file PTSWAK.dsl vào Clover/ACPI/patched
 2. Mở DSDT của máy bạn, tìm "_PTS" và "_WAK"
 3. Mở config.plist, thêm các patch sau
 </code></pre></div></div>
@@ -394,7 +394,7 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 
 <h2 id="sbus">SBUS</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "0x001F0003" nếu dùng CPU Broadwell trở về trước, "0x001F0004" nếu dùng CPU Skylake hoặc mới hơn trong DSDT của máy bạn
-2. Nếu đã có Device (SBUS) rồi thì thôi, còn không thì save SSDT-SBUS.dsl vào Clover/APCI/patched dưới dạng .aml
+2. Nếu đã có Device (SBUS) rồi thì thôi, còn không thì save SSDT-SBUS.dsl vào Clover/APCI/patched
 </code></pre></div></div>
 
 <h2 id="sleepkey">SleepKey</h2>
@@ -420,7 +420,7 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 </code></pre></div></div>
 
 <h2 id="xosi">XOSI</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save file SSDT-X0SI.dsl vào Clover/ACPI/patched dưới dạng .aml
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Xác định phiên bản Windows 
 2. Mở config.plist, thêm các patch sau
 </code></pre></div></div>
 
