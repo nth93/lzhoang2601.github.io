@@ -190,8 +190,7 @@ span {
 #home {
   width: 100%;
   height: calc(100vh - 40px);
-  background: url(../img/home-bg.png) center bottom no-repeat;
-  background-size: 100%;
+  background: #ffdd4a none repeat scroll 0 0;
   position: relative;
   margin-top: 40px;
 }
@@ -213,6 +212,7 @@ span {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  margin-bottom: -70px;
 }
 
 #home h1 {
@@ -248,7 +248,7 @@ span {
 }
 
 #home img {
-  max-width: 95%;
+  max-width: 58%;
   margin-bottom: 30px;
 }
 
@@ -294,9 +294,6 @@ span {
   color: #71c55d;
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
 /* Nav Menu Essentials */
 .nav-menu, .nav-menu * {
   margin: 0;
@@ -688,7 +685,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #ytb {
-    background: transparent url(../img/ytb.jpg) no-repeat center top fixed;
+    background: transparent url(../img/ytb.png) no-repeat center top fixed;
     background-size: cover;
 }
 
@@ -760,9 +757,12 @@ body.mobile-nav-active #mobile-nav-toggle i {
   transition: 0.5s;
   margin-bottom: 30px;
   border: 2px solid #71c55d;
-  background: #fff;
+  background: none;
   color: #71c55d;
   text-decoration: none;
+ margin-top: 20px;
+ margin: 0 auto; text-align: center; display: block;
+ width: 15%;
 }
 
 #ytb .btn-get-started:hover {
@@ -793,8 +793,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
 /* Contact Section
 --------------------------------*/
 #contact {
-  background: #fff;
-}
+  background: transparent url(../img/contact.png) no-repeat center top fixed;
+  background-size: cover;}
 
 #contact .info {
   color: #222;
