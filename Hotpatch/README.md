@@ -26,10 +26,10 @@
     Với Thinkpad laptop, bạn save 1 trong 2 SSDT-Fans-TP.dsl hoặc SSDT-TEMPToFans-TP.dsl, không được dùng 2 SSDT này cũng lúc.
 
 ## IMEI
-    Save SSDT-IMEI.dsl vào Clover/APCI/patched dưới dạng .aml với các máy dùng CPU Sandy Brigde, Ivy Brigde
+    Save SSDT-IMEI.dsl vào Clover/APCI/patched với các máy dùng CPU Sandy Brigde, Ivy Brigde
 
 ## LPC
-    Save SSDT-LPC.dsl vào Clover/APCI/patched dưới dạng .aml với các máy dùng CPU Skylake trở về trước
+    Save SSDT-LPC.dsl vào Clover/APCI/patched với các máy dùng CPU Skylake trở về trước
 
 ## NullEthernet (Tạo 1 Lan ảo)
     1. Thêm NullEthernet.kext và NullEthernetInjector.kext vào CKO
@@ -38,16 +38,21 @@
 ## PLUG
     Nếu bạn dùng Clover Bootloader thì không cần quan tâm, để kích hoạt chỉ cần tich PluginType trong config.plist/ACPI/Generate Options
     Còn nếu dùng OpenCore Bootloader, các bạn làm như sau
-    1. Mở DSDT của máy bạn, tìm "Processor" nếu không có thì chuyển sang tìm "SCK0"
-    2. Mở SSDT-Plug.dsl, nhấn Option+Command+F, 
+    1. Mở DSDT của máy bạn, tìm "Processor" nếu không có thì chuyển sang tìm "SCK0", dựa vào dòng đầu tiên ta sẽ được Scope _PR.CPU0 hoặc _PR.PR00, SCK0.C000, SCK0.CPU0, _SB.CPU0, _SB.PR00
+    2. Nếu được Scope _PR.CPU0, bạn chỉ việc save SSDT-PLUG.dsl vào Clover/ACPI/patched
+    Còn nếu bạn nhận được Scope khác thì mở SSDT-PLUG.dsl, thay thế "_PR.CPU0" bằng Scope bạn nhận được rồi save SSDT-PLUG.dsl vào Clover/ACPI/patched
         
 ## PNLF (Chỉnh độ sáng màn hình laptop)
     Để rõ hơn bạn có thể xem [bài viết](https://hackintosh.vn/su-dung-clover-de-thuc-hien-patch-nong-apci) hoặc [video]()
 
 ## PTSWAK
     1. Save file PTSWAK.dsl vào Clover/ACPI/patched dưới dạng .aml
-    2. Mở DSDT của máy bạn, tìm "_PTS" và "_WAK"
-    3. Mở config.plist, thêm các patch sau
+    2. Tìm "_PTS" và "_WAK" trong DSDT của máy bạn, nếu
+        Method (_PTS, 1, NotSerialized) tức Method (_PTS, 1, N)
+        Method (_PTS, 1, Serialized) tức Method (_PTS, 1, S)
+        Method (_WAK, 1, NotSerialized) tức Method (_WAK, 1, N)
+        Method (_WAK, 1, Serialized) tức Method (_WAK, 1, S)
+    3. Dựa vào Method đã xác định trên, tìm kiếm các patch "(PTSWAK)..." phù hợp thêm vào config.plist/ACPI/Patches của bạn
     
 ## PTSWAK-Bản vá mở rộng
     Nếu bạn gặp khó khăn trong việc đánh thức laptop sau sleep, bạn làm như sau:
@@ -55,17 +60,19 @@
     2. Nếu "_SB.LID0" có thì save SSDT-%EXT3-Wake_SB.LID0.dsl vào Clover/APCI/patched hoặc tương tự
     Còn nếu máy tính không shutdown được:
     1. Tìm "Processor" rồi đến "SCK0" để có được kết quả
-    2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 trong SSDT-%EXT1.dsl rồi save vào Clover/ACPI/patched còn nếu DATA của CPU là 410 thì làm tương tự nhưng thay 0x000 thành 0x430... 
+    2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 trong SSDT-%EXT1.dsl rồi save vào Clover/ACPI/patched còn nếu DATA của CPU là 410 thì làm tương tự nhưng thay 0x000 thành 0x430...
+    3. Save SSDT vừa chỉnh vào Clover/ACPI/patched
 
 ## SATA
-    Thêm SATA-100-series-unsupported.kext vào CKO nếu có pci 8086:a103 và 8086:9d03
-    Thêm SATA-200-series-unsupported.kext vào CKO nếu có pci 8086:a282
-    Thêm SATA-RAID-unsupported.kext vào CKO nếu có pci 8086:282A, 8086:2822
+    1. Thêm SATA-100-series-unsupported.kext vào CKO nếu có pci 8086:a103 và 8086:9d03
+       Thêm SATA-200-series-unsupported.kext vào CKO nếu có pci 8086:a282
+       Thêm SATA-RAID-unsupported.kext vào CKO nếu có pci 8086:282A, 8086:2822
+    2. Thêm 2 patches "(SATA)..." ở config_master.plist/KernelAndKextPatches/KextsToPatch vào config.plist/KernelAndKextPatches/KextsToPatch của bạn
     Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA thì hãy thêm AHCIinjectport.kext hoặc Sata-unsupported.kext
     
 ## SBUS    
     1. Tìm "0x001F0003" nếu dùng CPU Broadwell trở về trước, "0x001F0004" nếu dùng CPU Skylake hoặc mới hơn trong DSDT của máy bạn
-    2. Nếu đã có Device (SBUS) rồi thì thôi, còn không thì save SSDT-SBUS.dsl vào Clover/APCI/patched dưới dạng .aml
+    2. Nếu đã có Device (SBUS) rồi thì thôi, còn không thì save SSDT-SBUS.dsl vào Clover/APCI/patched
 
 ## SleepKey
 
@@ -86,9 +93,8 @@
         * CNVW (_ADR, 0x00140003)
         Kiểm tra tiếp xem thiết bị có '_PRW' hay không, nếu có thì tìm tiếp '0x0D' hoặc '0x6D' trong Method (_PRW,..) rồi lưu lại
     2. Dựa vào các thiết bị có '_PRW' để thêm patch vào config.plist/ACPI/Patches, các patch bạn có thể tìm ở config_master.plist với từ khoá (Wake)
-    3. Mở SSDT-Sleep_PRW.dsl, nếu trong Method (_PRW,..) là 0x0D thì thay 0x6D thành 0x0D rồi save vào Clover/ACPI/patched với dạng .aml
+    3. Mở SSDT-Sleep_PRW.dsl, nếu trong Method (_PRW,..) là 0x0D thì thay 0x6D thành 0x0D rồi save vào Clover/ACPI/patched
     
 ## XOSI
-    1. Save file SSDT-X0SI.dsl vào Clover/ACPI/patched dưới dạng .aml 
-    2. Mở config.plist, thêm các patch sau
-        
+    1. Save file SSDT-X0SI.dsl vào Clover/ACPI/patched 
+    2. Mở config.plist, thêm các patch có đầu là "(XOSI)..." vào config.plist/ACPI/Patches của bạn        
