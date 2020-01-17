@@ -6,11 +6,16 @@
 	<dict>
 		<key>DSDT</key>
 		<dict>
+			<key>Fixes</key>
+			<dict>
+				<key>FakeLPC</key>
+				<false/>
+			</dict>
 			<key>Patches</key>
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>ALSD._STA to ALSD.XSTA</string>
+					<string>(ALS0) ALSD._STA to ALSD.XSTA</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -42,7 +47,27 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(EC)change EC to EC0</string>
+					<string>(BrightKey) SMEE to XMEE (BRT6)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U01FRQE=</data>
+					<key>Replace</key>
+					<data>WE1FRQE=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(BrightKey) _Q13 to XQ13</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1ExMw==</data>
+					<key>Replace</key>
+					<data>WFExMw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(EC) EC to EC0</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -52,7 +77,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(EC)change H_EC to EC0</string>
+					<string>(EC) H_EC to EC0</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -69,6 +94,66 @@
 					<data>RUNEVg==</data>
 					<key>Replace</key>
 					<data>RUMwXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(EC) EC0 to EC</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUMwXw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(EC) H_EC to EC</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>SF9FQw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(EC) ECDV to EC</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUNEVg==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(GPU) GFX0 to IGPU</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R0ZYMA==</data>
+					<key>Replace</key>
+					<data>SUdQVQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(GPU) PCI0.VID to IGPU</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>UENJMFZJRF8=</data>
+					<key>Replace</key>
+					<data>UENJMElHUFU=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(GPU) PCI0.VID to IGPU</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>VklEXwhfQURSDAAAAgA=</data>
+					<key>Replace</key>
+					<data>SUdQVQhfQURSDAAAAgA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -94,7 +179,7 @@
 					<key>Comment</key>
 					<string>(I2C) _CRS to XCRS</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>X0NSUw==</data>
 					<key>Replace</key>
@@ -104,7 +189,7 @@
 					<key>Comment</key>
 					<string>(I2C) _STA to XSTA</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>X1NUQQ==</data>
 					<key>Replace</key>
@@ -114,7 +199,7 @@
 					<key>Comment</key>
 					<string>(I2C) USTP to XSTP</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>VVNUUAg=</data>
 					<key>Replace</key>
@@ -199,6 +284,76 @@
 					<data>X1dBSwk=</data>
 					<key>Replace</key>
 					<data>WldBSwk=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(SATA) SAT0 to SATA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U0FUMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(SleepKey)_Q13 to XQ13(TP-FnF4)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1ExMw==</data>
+					<key>Replace</key>
+					<data>WFExMw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Sound) AZAL to HDEF</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>QVpBTA==</data>
+					<key>Replace</key>
+					<data>SERFRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Sound) HDAS to HDEF</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>SERBUw==</data>
+					<key>Replace</key>
+					<data>SERFRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Sound) ALZA to HDEF</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>QUxaQQ==</data>
+					<key>Replace</key>
+					<data>SERFRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Sound) CAVS to HDEF</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>Q0FWUw==</data>
+					<key>Replace</key>
+					<data>SERFRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(Sound) B0D3 to HDAU</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>QjBEMw==</data>
+					<key>Replace</key>
+					<data>SERBVQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -472,13 +627,13 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(SleepKey)_Q13 to XQ13(TP-FnF4)</string>
+					<string>_DSM to XDSM</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>X1ExMw==</data>
+					<data>X0RTTQ==</data>
 					<key>Replace</key>
-					<data>WFExMw==</data>
+					<data>WERTTQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -489,86 +644,6 @@
 					<data>QVBTUw==</data>
 					<key>Replace</key>
 					<data>QVBYWA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _DSM to XDSM</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X0RTTQ==</data>
-					<key>Replace</key>
-					<data>WERTTQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>R0ZYMA==</data>
-					<key>Replace</key>
-					<data>SUdQVQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change PCI0.VID to IGPU #1 (Thinkpad), optionally pair with SSDT-IGPU.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>UENJMFZJRF8=</data>
-					<key>Replace</key>
-					<data>UENJMElHUFU=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change PCI0.VID to IGPU #2 (Thinkpad), optionally pair with SSDT-IGPU.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>VklEXwhfQURSDAAAAgA=</data>
-					<key>Replace</key>
-					<data>SUdQVQhfQURSDAAAAgA=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change B0D3 to HDAU, optionally pair with SSDT-HDAU.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>QjBEMw==</data>
-					<key>Replace</key>
-					<data>SERBVQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HDAS to HDEF, optionally pair with SSDT-HDEF.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>SERBUw==</data>
-					<key>Replace</key>
-					<data>SERFRg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change AZAL to HDEF, optionally pair with SSDT-HDEF.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>QVpBTA==</data>
-					<key>Replace</key>
-					<data>SERFRg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change SAT0 to SATA, optionally pair with SSDT-SATA.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>U0FUMA==</data>
-					<key>Replace</key>
-					<data>U0FUQQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -599,7 +674,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>alpm I/O error</string>
+				<string>(SATA) alpm I/O error</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -613,7 +688,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>EXTERNAL ICONS PATCH</string>
+				<string>(SATA) EXTERNAL ICONS PATCH</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -624,6 +699,34 @@
 				<string>AppleAHCIPort</string>
 				<key>Replace</key>
 				<data>SW50ZXJuYWw=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(I2C) Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>SU9LaXQ=</data>
+				<key>InfoPlistPatch</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelLpssI2C</string>
+				<key>Replace</key>
+				<data>SU9LaXM=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(I2C) Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>SU9LaXQ=</data>
+				<key>InfoPlistPatch</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelLpssI2CController</string>
+				<key>Replace</key>
+				<data>SU9LaXM=</data>
 			</dict>
 		</array>
 	</dict>

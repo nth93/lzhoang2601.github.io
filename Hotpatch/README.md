@@ -18,6 +18,12 @@
     3. Xoá hết phần Raw Table Data... đi 
     4. Save file ECDT.aml vừa chỉnh vào Clover/ACPI/patched
     5. Thêm ECDT vào config.plist/ACPI/Drop Table
+    
+## Fan (Hiển thị tốc độ quạt và nhiệt độ)
+    1. Cho ACPIPoller.kext vào CKO
+    2. Nếu bạn không dùng FakeSMC.kext, vui lòng dùng nó. Mở FakeSMC.kext/Info.plist/IOKitPersonalities/FakeSMC/Configuration/keys/FNum/1/, bạn thay 00 thành 01
+    3. Với Dell laptop, bạn save SSDT-Fans-Dell.dsl vào Clover/ACPI/patched
+    Với Thinkpad laptop, bạn save 1 trong 2 SSDT-Fans-TP.dsl hoặc SSDT-TEMPToFans-TP.dsl, không được dùng 2 SSDT này cũng lúc.
 
 ## IMEI
     Save SSDT-IMEI.dsl vào Clover/APCI/patched dưới dạng .aml với các máy dùng CPU Sandy Brigde, Ivy Brigde
@@ -42,6 +48,14 @@
     1. Save file PTSWAK.dsl vào Clover/ACPI/patched dưới dạng .aml
     2. Mở DSDT của máy bạn, tìm "_PTS" và "_WAK"
     3. Mở config.plist, thêm các patch sau
+    
+## PTSWAK-Bản vá mở rộng
+    Nếu bạn gặp khó khăn trong việc đánh thức laptop sau sleep, bạn làm như sau:
+    1. Tìm "_SB.LID0" và "_SB.PCI0.LPCB.LID0" trong DSDT của bạn. 
+    2. Nếu "_SB.LID0" có thì save SSDT-%EXT3-Wake_SB.LID0.dsl vào Clover/APCI/patched hoặc tương tự
+    Còn nếu máy tính không shutdown được:
+    1. Tìm "Processor" rồi đến "SCK0" để có được kết quả
+    2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 trong SSDT-%EXT1.dsl rồi save vào Clover/ACPI/patched còn nếu DATA của CPU là 410 thì làm tương tự nhưng thay 0x000 thành 0x430... 
 
 ## SATA
     Thêm SATA-100-series-unsupported.kext vào CKO nếu có pci 8086:a103 và 8086:9d03
