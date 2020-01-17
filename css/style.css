@@ -690,24 +690,24 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 @media (max-width: 991px) {
-  #ytb .block-blog {
-    margin-bottom: 30px;
+  #ytb .block-video {
+    margin-bottom: 10px;
   }
 }
 
-#ytb .block-blog img {
+#ytb .block-video img {
   width: 100%;
 }
 
-#ytb .block-blog .content-blog {
+#ytb .block-video .content-video {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.19);
   display: inline-block;
   min-height: 125px;
-  padding: 20px 10px;
+  padding: 24px 10px;
   width: 100%;
 }
 
-#ytb .block-blog .content-blog h4 {
+#ytb .block-video .content-video h4 {
   line-height: 24px;
   margin-bottom: 20px;
   text-transform: capitalize;
@@ -716,23 +716,23 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-size: 16px;
 }
 
-#ytb .block-blog .content-blog h4 a {
-  color: #555;
+#ytb .block-video .content-video h4 a {
+  color: #71c55d;
   text-decoration: none;
   transition: 0.3s;
 }
 
-#ytb .block-blog .content-blog h4 a:hover {
-  color: #71c55d;
+#ytb .block-video .content-video h4 a:hover {
+  color: #505050;
 }
 
-#ytb .block-blog .content-blog > span {
+#ytb .block-video .content-video > span {
   float: left;
   font-size: 12px;
 }
 
-#ytb .block-blog .content-blog a.readmore {
-  color: #505050;
+#ytb .block-video .content-video a.readmore {
+  color: #71c55d;
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
@@ -741,33 +741,32 @@ body.mobile-nav-active #mobile-nav-toggle i {
   text-transform: capitalize;
 }
 
-#ytb .block-blog .content-blog a.readmore:hover {
-  color: #71c55d;
+#ytb .block-video .content-video a.readmore:hover {
+  color: #505050;
 }
 
 #ytb .btn-ytb {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 20px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 11px 36px;
   border-radius: 50px;
   transition: 0.5s;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: 2px solid #71c55d;
   background: none;
   color: #71c55d;
   text-decoration: none;
- margin-top: 20px;
  margin: 0 auto; text-align: center; display: block;
  width: 15%;
 }
 
-#ytb .btn-get-started:hover {
-  background: #71c55d;
-  color: #fff;
+#ytb .btn-ytb:hover {
+  background: nope;
+  color: #505050;
 }
 
 #ytb .btns a {
