@@ -330,7 +330,7 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 
 <h2 id="ec">EC</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "PNP0C09" trong DSDT của máy bạn
-    2.Nếu nhận lại Device (EC) hay H_EC, ECDV thì xác định rồi thêm patch phù hợp vào config.plist/ACPI/DSDT/Patches
+2.Nếu nhận lại Device (EC) hay H_EC, ECDV thì xác định rồi thêm patch phù hợp vào config.plist/ACPI/DSDT/Patches
 3. Thêm SSDT-EC vào Clover/ACPI/patched để tạo EC ảo điều khiển nguồn USB
 </code></pre></div></div>
 
@@ -346,15 +346,18 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Cho ACPIPoller.kext vào CKO
 2. Nếu bạn không dùng FakeSMC.kext, vui lòng dùng nó. Mở FakeSMC.kext/Info.plist/IOKitPersonalities/FakeSMC/Configuration/keys/FNum/1/, bạn thay 00 thành 01
 3. Với Dell laptop, bạn save SSDT-Fans-Dell.dsl vào Clover/ACPI/patched
-Với Thinkpad laptop, bạn save 1 trong 2 SSDT-Fans-TP.dsl hoặc SSDT-TEMPToFans-TP.dsl, không được dùng 2 SSDT này cũng lúc.
+   Với Thinkpad laptop, bạn save 1 trong 2 SSDT-Fans-TP.dsl hoặc SSDT-TEMPToFans-TP.dsl, không được dùng 2 SSDT này cũng lúc
+   Với Asus laptop, bạn làm theo guide <a herf="https://osxlatitude.com/forums/topic/10244-how-to-implement-custom-fan-control-on-asus-laptops/">sau</a>
 </code></pre></div></div>
 
 <h2 id="imei">IMEI</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save SSDT-IMEI.dsl vào Clover/APCI/patched với các máy dùng CPU Sandy Brigde, Ivy Brigde
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save SSDT-IMEI.dsl vào Clover/APCI/patched với các máy dùng CPU Sandy Brigde, Ivy Brigde
+2. Tìm "HECI" và "MEI" trong DSDT của máy bạn rồi thêm patch "(IMEI)..." phù hợp vào config.plist/ACPI/Patches
 </code></pre></div></div>
 
 <h2 id="lpc">LPC</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save SSDT-LPC.dsl vào Clover/APCI/patched với các máy dùng CPU Skylake trở về trước
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save SSDT-LPC.dsl vào Clover/APCI/patched nếu trong DSDT của máy bạn không tìm thấy "LPCB"
+    2. Thêm patch "(LPC) LPC to LPCB" vào config.plist/ACPI/Patches
 </code></pre></div></div>
 
 <h2 id="nullethernet">NullEthernet (Tạo 1 Lan ảo)</h2>
@@ -367,7 +370,7 @@ Với Thinkpad laptop, bạn save 1 trong 2 SSDT-Fans-TP.dsl hoặc SSDT-TEMPToF
 Còn nếu dùng OpenCore Bootloader, các bạn làm như sau
 1. Mở DSDT của máy bạn, tìm "Processor" nếu không có thì chuyển sang tìm "SCK0", dựa vào dòng đầu tiên ta sẽ được Scope _PR.CPU0 hoặc _PR.PR00, SCK0.C000, SCK0.CPU0, _SB.CPU0, _SB.PR00
 2. Nếu được Scope _PR.CPU0, bạn chỉ việc save SSDT-PLUG.dsl vào Clover/ACPI/patched
-Còn nếu bạn nhận được Scope khác thì mở SSDT-PLUG.dsl, thay thế "_PR.CPU0" bằng Scope bạn nhận được rồi save SSDT-PLUG.dsl vào Clover/ACPI/patched
+   Còn nếu bạn nhận được Scope khác thì mở SSDT-PLUG.dsl, thay thế "_PR.CPU0" bằng Scope bạn nhận được rồi save SSDT-PLUG.dsl vào Clover/ACPI/patched
 </code></pre></div></div>
 
 <h2 id="pnlf">PNLF (Chỉnh độ sáng màn hình laptop)</h2>
@@ -390,8 +393,7 @@ Còn nếu bạn nhận được Scope khác thì mở SSDT-PLUG.dsl, thay thế
 2. Nếu "_SB.LID0" có thì save SSDT-%EXT3-Wake_SB.LID0.dsl vào Clover/APCI/patched hoặc tương tự
 Còn nếu máy tính không shutdown được:
 1. Tìm "Processor" rồi đến "SCK0" để có được kết quả
-2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 trong SSDT-%EXT1.dsl rồi save vào Clover/ACPI/patched còn nếu DATA của CPU là 410 thì làm tương tự nhưng thay 0x000 thành 0x430...
-3. Save SSDT vừa chỉnh vào Clover/ACPI/patched
+2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 còn DATA của CPU là 410 thì thay 0x000 thành 0x430 trong SSDT-%EXT1.dsl rồi save vào Clover/ACPI/patched...
 </code></pre></div></div>
 
 <h2 id="sata">SATA</h2>
@@ -406,9 +408,15 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 2. Nếu đã có Device (SBUS) rồi thì thôi, còn không thì save SSDT-SBUS.dsl vào Clover/APCI/patched
 </code></pre></div></div>
 
-<h2 id="sleepkey">SleepKey</h2>
+<h2 id="sleep">Sleep</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Còn nếu máy vẫn không chịu ngủ, bạn hãy thêm patch "(Sleep) LID0:_PRW to XPRW" vào config.plist/ACPI/Patches của bạn
+</code></pre></div></div>
 
 <h2 id="usb">USB</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để patch USB port bạn có thể đọc <a href="https://hackintosh.vn/su-dung-clover-de-thuc-hien-patch-nong-apci">bài viết</a> hoặc <a href="https://lzhoang2601.github.io/#usb">video</a> sau
+<!-- 2. Bạn thêm SSDT-EH01.dsl hoặc SSDT-EH02.dsl, SSDT-XHC.dsl vào Clover/ACPI/patched tuỳ xem máy bạn có những USB Controler nào(bạn có dùng DSDT, Hackintool,... để xác định)
+3. Bạn tìm tiếp "ESEL", "XSEL" và "XWAK" trong DSDT của máy bạn, nếu có thì save SSDT có tên tương ứng vào Clover/ACPI/patched -->
+</code></pre></div></div>
 
 <h2 id="wake">Wake</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mở DSDT của máy bạn, tìm kiếm lần lượt các địa chỉ sau:
@@ -429,8 +437,8 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 </code></pre></div></div>
 
 <h2 id="xosi">XOSI</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Xác định phiên bản Windows
-2. Mở config.plist, thêm các patch sau
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save SSDT-XOSI.dsl vào Clover/APCI/patched
+    2. Thêm các patch có tên "(XOSI)..." vào config.plist/ACPI/DSDT/Patches
 </code></pre></div></div>
 
           </div>
