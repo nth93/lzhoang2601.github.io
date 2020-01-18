@@ -14,7 +14,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLFCFL", 0)
         // _UID is set depending on PWMMax to match profiles in AppleBacklightFixup.kext Info.plist
         // 14: Sandy/Ivy 0x710
         // 15: Haswell/Broadwell 0xad9
-        // 16: Skylake/KabyLake 0x56c (and some Haswell, example 0xa2e0008)
+        // 16: Skylake/KabyLake/Kabylake-R 0x56c (and some Haswell, example 0xa2e0008)
         // 17: custom LMAX=0x7a1
         // 18: custom LMAX=0x1499
         // 19: CoffeeLake 0xffff

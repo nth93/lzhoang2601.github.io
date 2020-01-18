@@ -27,6 +27,18 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>(AOAC) _S3 to XS3</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1NUQQ==</data>
+					<key>Replace</key>
+					<data>WFNUQQ==</data>
+					<key>TgtBridge</key>
+					<data>QUxTRA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>(BrightKey) _Q0E to XQ0E</string>
 					<key>Disabled</key>
 					<false/>

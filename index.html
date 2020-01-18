@@ -318,6 +318,12 @@
    Nếu tìm mà không có, bạn chỉ việc save SSDT-ALS0.dsl vào Clover/APCI/patched là được
 </code></pre></div></div>
 
+<h2 id="aoac">AOAC (Công nghệ luôn luôn bật, luôn luôn kết nối)</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "ACPI0008" trong DSDT của máy bạn
+2. Nếu có, bạn save SSDT-ALSD.dsl vào Clover/ACPI/patched và thêm tiếp patch có đầu "(ALS0)..." vào config.plist/ACPI/DSDT/Patches của bạn.
+   Nếu tìm mà không có, bạn chỉ việc save SSDT-ALS0.dsl vào Clover/APCI/patched là được
+</code></pre></div></div>
+
 <h2 id="battery">Battery (Các patch pin sẵn cho laptop)</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Chọn đúng SSDT patch pin cho laptop của mình rồi save vào Clover/ACPI/patched   .
 Rồi thêm tiếp các patch từ config_(tên máy).plist vào config.plist/ACPI/DSDT/Patches của bạn.
@@ -396,6 +402,10 @@ Còn nếu máy tính không shutdown được:
 2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 còn DATA của CPU là 410 thì thay 0x000 thành 0x430 trong SSDT-%EXT1.dsl rồi save vào Clover/ACPI/patched...
 </code></pre></div></div>
 
+<h2 id="rtc">RTC (Kích hoạt RTC device với yêu cầu của macOS)</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Patch này chỉ nên dùng nếu bạn mainboard 300-series và OpenCore Bootloader
+</code></pre></div></div>
+
 <h2 id="sata">SATA</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Thêm SATA-100-series-unsupported.kext vào CKO nếu có pci 8086:a103 và 8086:9d03
 Thêm SATA-200-series-unsupported.kext vào CKO nếu có pci 8086:a282
@@ -405,7 +415,9 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 
 <h2 id="sbus">SBUS</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "0x001F0003" nếu dùng CPU Broadwell trở về trước, "0x001F0004" nếu dùng CPU Skylake hoặc mới hơn trong DSDT của máy bạn
-2. Nếu đã có Device (SBUS) rồi thì thôi, còn không thì save SSDT-SBUS.dsl vào Clover/APCI/patched
+2. Nếu đã có Device (SBUS) rồi thì thôi
+   Nếu không có thì save SSDT-SBUS.dsl vào Clover/APCI/patched
+   Còn nếu bạn nhận lại "Device (SMBU)" sau khi tìm kiếm, bạn đổi hết "SBUS" thành "SMBU" trong SSDT-SBUS.dsl rồi save vào Clover/ACPI/patched. Với các Device khác bạn cũng làm tương tự
 </code></pre></div></div>
 
 <h2 id="sleep">Sleep</h2>
