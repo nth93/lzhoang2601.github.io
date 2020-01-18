@@ -342,7 +342,7 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 5. Thêm ECDT vào config.plist/ACPI/Drop Table
 </code></pre></div></div>
 
-<h2 id="fan">Fan (Hiển thị tốc độ quạt và nhiệt độ)</h2>
+<h2 id="fan">Fan (Hiển thị tốc độ quạt)</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Cho ACPIPoller.kext vào CKO
 2. Nếu bạn không dùng FakeSMC.kext, vui lòng dùng nó. Mở FakeSMC.kext/Info.plist/IOKitPersonalities/FakeSMC/Configuration/keys/FNum/1/, bạn thay 00 thành 01
 3. Với Dell laptop, bạn save SSDT-Fans-Dell.dsl vào Clover/ACPI/patched
@@ -412,8 +412,11 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Còn nếu máy vẫn không chịu ngủ, bạn hãy thêm patch "(Sleep) LID0:_PRW to XPRW" vào config.plist/ACPI/Patches của bạn
 </code></pre></div></div>
 
+<h2 id="sound">Sound</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để patch Sound, bạn hãy đọc <a href="https://hackintosh.vn/kich-hoat-am-thanh-sau-khi-cai-hackintosh">bài viết</a> hoặc <a href="https://lzhoang2601.github.io/#sound">video</a> sau</code></pre></div></div>
+
 <h2 id="usb">USB</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để patch USB port bạn có thể đọc <a href="https://hackintosh.vn/su-dung-clover-de-thuc-hien-patch-nong-apci">bài viết</a> hoặc <a href="https://lzhoang2601.github.io/#usb">video</a> sau
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để patch USB port, bạn hãy đọc <a href="https://hackintosh.vn/su-dung-clover-de-thuc-hien-patch-nong-apci">bài viết</a> hoặc <a href="https://lzhoang2601.github.io/#usb">video</a> sau
 <!-- 2. Bạn thêm SSDT-EH01.dsl hoặc SSDT-EH02.dsl, SSDT-XHC.dsl vào Clover/ACPI/patched tuỳ xem máy bạn có những USB Controler nào(bạn có dùng DSDT, Hackintool,... để xác định)
 3. Bạn tìm tiếp "ESEL", "XSEL" và "XWAK" trong DSDT của máy bạn, nếu có thì save SSDT có tên tương ứng vào Clover/ACPI/patched -->
 </code></pre></div></div>
@@ -432,7 +435,7 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
        Còn từ Skylake trở đi: GLAN hoặc IGBE hoặc khác (_ADR, 0x001F0006)
     * CNVW (_ADR, 0x00140003)
     Kiểm tra tiếp xem thiết bị có '_PRW' hay không, nếu có thì tìm tiếp '0x0D' hoặc '0x6D' trong Method (_PRW,..) rồi lưu lại
-2. Dựa vào các thiết bị có '_PRW' để thêm patch vào config.plist/ACPI/Patches, các patch bạn có thể tìm ở config_master.plist với từ khoá (Wake)
+2. Dựa vào các thiết bị có '_PRW' bạn tìm patch "(Wake)..." phù hợp rồi thêm patch vào config.plist/ACPI/DSDT/Patches
 3. Mở SSDT-Sleep_PRW.dsl, nếu trong Method (_PRW,..) là 0x0D thì thay 0x6D thành 0x0D rồi save vào Clover/ACPI/patched với dạng .aml
 </code></pre></div></div>
 
@@ -452,9 +455,6 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
     <div class="copyrights">
       <div class="container">
         <p>&copy; Copyrights lzhoang2601. All rights reserved.</p>
-        <div class="credits">
-          Designed by <a href="https://lzhoang2601.github.io/">BootstrapMade</a>
-        </div>
       </div>
     </div>
 

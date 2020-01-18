@@ -13,9 +13,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "EXT1", 0)
 
         If (5 == Arg0)
         {
-            OperationRegion(PMRS, SystemIO, 0x430, 1)
-            //search Processor...if DATA of CPU is 1810, set 0x1830
-            //                   if DATA is 410, set 0x430....
+            OperationRegion(PMRS, SystemIO, 0x000, 1)
             Field(PMRS, ByteAcc, NoLock, Preserve)
             {
                     , 4,

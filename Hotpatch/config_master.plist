@@ -639,7 +639,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_DSM to XDSM</string>
+					<string>(XOSI) _DSM to XDSM</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
