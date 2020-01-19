@@ -394,12 +394,10 @@ Còn nếu dùng OpenCore Bootloader, các bạn làm như sau
 </code></pre></div></div>
 
 <h2 id="ptswakmore">PTSWAK-Bản vá mở rộng</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nếu bạn gặp khó khăn trong việc đánh thức laptop sau sleep, bạn làm như sau:
-1. Tìm "_SB.LID0" và "_SB.PCI0.LPCB.LID0" trong DSDT của bạn.
-2. Nếu "_SB.LID0" có thì save SSDT-%EXT3-Wake_SB.LID0.dsl vào Clover/APCI/patched hoặc tương tự
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nếu bạn gặp khó khăn trong việc đánh thức laptop sau sleep, bạn save SSDT-EXT4-WakeScreen.dsl vào Clover/APCI/patched
 Còn nếu máy tính không shutdown được:
 1. Tìm "Processor" rồi đến "SCK0" để có được kết quả
-2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 còn DATA của CPU là 410 thì thay 0x000 thành 0x430 trong SSDT-%EXT1.dsl rồi save vào Clover/ACPI/patched...
+2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 còn DATA của CPU là 410 thì thay 0x000 thành 0x430 trong SSDT-EXT1-Shutdown.dsl rồi save vào Clover/ACPI/patched...
 </code></pre></div></div>
 
 <h2 id="rtc">RTC (Kích hoạt RTC device với yêu cầu của macOS)</h2>
@@ -421,7 +419,17 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 </code></pre></div></div>
 
 <h2 id="sleep">Sleep</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Còn nếu máy vẫn không chịu ngủ, bạn hãy thêm patch "(Sleep) LID0:_PRW to XPRW" vào config.plist/ACPI/Patches của bạn
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Còn nếu máy vẫn không chịu ngủ, bạn hãy thêm patch "(Sleep) LID0:_PRW to XPRW" vào config.plist/ACPI/DSDT/Patches của bạn
+</code></pre></div></div>
+
+<h2 id="sleepkey">SleepKey</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save SSDT-SleepDefine.dsl + SSDT-PTSWAK.dsl vào Clover/ACPI/patched
+    Tìm "PNP0C0E" trong DSDT của máy bạn, nếu không có kết quả, thêm SSDT-SLPB.dsl vào CLover/ACPI/patched
+   Tìm tiếp "_SB.LID0" và "_SB.LID0.LPCB.LID0" trong DSDT của máy bạn, nếu có thì save SSDT_Sleep có tên tương ứng vào Clover/ACPI/patched
+   Save SSDT-SleepKeyLID0-BTNV-Dell.dsl vào Clover/ACPI/patched nếu dùng Dell laptop, còn với Thinkpad laptop thì save SSDT-SleepKeyLID0-Q13Q2B-TP.dsl
+2. Thêm patch "(SleepKey) _LID to XLID" vào config.plist/ACPI/DSDT/Patches
+   Với Dell laptop, thêm patch "(SleepKey) BTNV to XTNV" vào config.plist/ACPI/DSDT/Patches
+   Còn Thinkpad laptop, thêm patches "(SleepKey) _Q13 to XQ13" và "(SleepKey) _Q28 to XQ28" vào config.plist/ACPI/DSDT/Patches
 </code></pre></div></div>
 
 <h2 id="sound">Sound</h2>

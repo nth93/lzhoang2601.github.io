@@ -331,6 +331,46 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>(SleepKey) _LID to XLID</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X0xJRAA=</data>
+					<key>Replace</key>
+					<data>WExJRAA=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(SleepKey) BTNV to XTNV</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>QlROVgI=</data>
+					<key>Replace</key>
+					<data>WFROVgI=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(SleepKey) _Q13 to XQ13</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1ExMw==</data>
+					<key>Replace</key>
+					<data>WFExMw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(SleepKey) _Q28 to XQ28</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1EyQg==</data>
+					<key>Replace</key>
+					<data>WFEyQg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>(Sound) AZAL to HDEF</string>
 					<key>Disabled</key>
 					<false/>
