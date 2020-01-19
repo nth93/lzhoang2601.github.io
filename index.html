@@ -273,25 +273,9 @@
   <li>
     <p>Hoàn thiện Hackintosh:</p>
 
-    <p><a href="https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/">ACPIBaterryManager.kext</a>: Giúp hiện thỉ phần trăm pin trên laptop (cần patch DSDT)</p>
-
     <p><a href="https://github.com/acidanthera/AppleALC/releases">AppleALC.kext</a>: Giúp kích hoạt âm thanh (cần layout-id phù hợp, kext lilu)</p>
 
-    <p><a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads/">BrcmPatchRAM2.kext</a>: Nhằm kích hoạt Bluetooth của Broadcom (cần FirmwareData nếu cài vào C/K/O hay FirmwareRepo nếu cài vào L/E hoặc S/L/E)</p>
-
-    <p><a href="https://github.com/acidanthera/BT4LEContinuityFixup/releases">BT4LEContinuitilyFixup.kext</a>: Nhằm kích hoạt Airdrop, Handoff, Contiuntily, Hotspot cho các card Bluetooth giống với card Bluetooth mà Apple đã sử dụng</p>
-
     <p><a href="https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/">CodecCommander.kext</a>: Giúp fix lỗi mất âm thanh sau khi sleep và tai nghe bị rè trên laptop</p>
-
-    <p><a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/">FakeCPIID.kext</a>: Cho phép hỗ trợ cho CPU Intel trên các phiên bản macOS trước đó không hỗ trợ CPU đó bằng cách giả vờ là CPU được hỗ trợ</p>
-
-    <p><a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/">FakeCPIID_BCM57XX_as_BCM57765.kext</a>: Nhằm fake một số card LAN của Broadcom để được native (cần kext FakeCPIID đi kèm)</p>
-
-    <p><a href="https://bitbucket.org/RehabMan/applebacklightfixup/downloads/">AppleBacklightFixup.kext</a>: Giúp chỉnh độ sáng màn hình trên laptop <a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/Patch/Instrument.EC.Queries.txt">InstrumentECQueries</a></p>
-
-    <p><a href="https://bitbucket.org/RehabMan/os-x-acpi-debug/downloads/">ACPIDebug.kext</a>: Giúp theo dõi các biến và đường dẫn thực thi từ mã DSDT/SSDT <a href="https://github.com/lzhoang2601/CreateUSBmacOSInstall/releases/download/Patch/Hotkeys.Brightness.Patch.txt">HotkeysBrightnessPatch</a></p>
-
-    <p><a href="https://bitbucket.org/RehabMan/os-x-generic-usb3/downloads/">GenericUSBXHCI.kext</a>: Nhằm fix cổng USB 3.0</p>
   </li>
 </ul>
       
@@ -310,7 +294,7 @@
       </div>
       
           <div class="container-lg px-3 my-5 markdown-body">
-              <h3>Nếu có yêu cầu thêm patch vào Clover/APCI/patched thì bắt buộc cần save    và các patch cho config.plist đã có đầy đủ ở config_master.plist(trừ Battery) nhé!</h3>
+              <h3>Nếu có yêu cầu thêm patch vào Clover/APCI/patched thì bắt buộc cần save và các patch cho config.plist đã có đầy đủ ở config_master.plist(trừ Battery) nhé!</h3>
 
 <h2 id="als0">ALS0 (Cảm biến ánh sáng)</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "ACPI0008" trong DSDT của máy bạn
@@ -319,14 +303,12 @@
 </code></pre></div></div>
 
 <h2 id="aoac">AOAC (Công nghệ luôn luôn bật, luôn luôn kết nối)</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "ACPI0008" trong DSDT của máy bạn
-2. Nếu có, bạn save SSDT-ALSD.dsl vào Clover/ACPI/patched và thêm tiếp patch có đầu "(ALS0)..." vào config.plist/ACPI/DSDT/Patches của bạn.
-   Nếu tìm mà không có, bạn chỉ việc save SSDT-ALS0.dsl vào Clover/APCI/patched là được
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 </code></pre></div></div>
 
 <h2 id="battery">Battery (Các patch pin sẵn cho laptop)</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Chọn đúng SSDT patch pin cho laptop của mình rồi save vào Clover/ACPI/patched   .
-Rồi thêm tiếp các patch từ config_(tên máy).plist vào config.plist/ACPI/DSDT/Patches của bạn.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Chọn đúng SSDT patch pin cho laptop của mình rồi save vào Clover/ACPI/patched   .
+2. Thêm các patches từ config_(tên máy).plist vào config.plist/ACPI/DSDT/Patches của bạn.
 Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hãy patch thủ công theo <a href="https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/">guide</a>
 </code></pre></div></div>
 
@@ -337,12 +319,12 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 <h2 id="ec">EC</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tìm "PNP0C09" trong DSDT của máy bạn
 2.Nếu nhận lại Device (EC) hay H_EC, ECDV thì xác định rồi thêm patch phù hợp vào config.plist/ACPI/DSDT/Patches
-3. Thêm SSDT-EC vào Clover/ACPI/patched để tạo EC ảo điều khiển nguồn USB
+3. Thêm SSDT-EC.dsl vào Clover/ACPI/patched để tạo EC ảo điều khiển nguồn USB
 </code></pre></div></div>
 
 <h2 id="ecdt">ECDT</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mở ECDT.aml trong Clover/ACPI/origin (Nếu không có SSDT-ECDT.aml, bạn bỏ qua bước này, quay lại bước <a href="https://www.lzhoang2601.github.io/#ec">EC</a> rename bộ điều khiển EC của bạn về tên EC)
-2. Kiểm tra phần Namepatch, chuyển LPC thành LPCB, EC hay H_EC,ECDV thành ECO。
+2. Kiểm tra phần Namepatch, chuyển LPC thành LPCB, EC hay H_EC, ECDV thành ECO。
 3. Xoá hết phần Raw Table Data... đi
 4. Save file ECDT.aml vừa chỉnh vào Clover/ACPI/patched
 5. Thêm ECDT vào config.plist/ACPI/Drop Table
@@ -361,6 +343,10 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 2. Tìm "HECI" và "MEI" trong DSDT của máy bạn rồi thêm patch "(IMEI)..." phù hợp vào config.plist/ACPI/Patches
 </code></pre></div></div>
 
+<h2 id="keyboard&trackpad">Keyboard&Trackpad</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để patch Trackpad I2C, các bạn có thể xem <a href="https://hackintosh.vn/trackpad-on-hackintosh-voi-giao-thu-i2c">bài viết</a> hoặc <a href="https://lzhoang2601.github.io/#Keyboard&Trackpad">video</a> sau
+</code></pre></div></div>
+
 <h2 id="lpc">LPC</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save SSDT-LPC.dsl vào Clover/APCI/patched nếu trong DSDT của máy bạn không tìm thấy "LPCB"
     2. Thêm patch "(LPC) LPC to LPCB" vào config.plist/ACPI/Patches
@@ -373,10 +359,10 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 
 <h2 id="plug">PLUG</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nếu bạn dùng Clover Bootloader thì không cần quan tâm, để kích hoạt chỉ cần tich PluginType trong config.plist/ACPI/Generate Options
-Còn nếu dùng OpenCore Bootloader, các bạn làm như sau
-1. Mở DSDT của máy bạn, tìm "Processor" nếu không có thì chuyển sang tìm "SCK0", dựa vào dòng đầu tiên ta sẽ được Scope _PR.CPU0 hoặc _PR.PR00, SCK0.C000, SCK0.CPU0, _SB.CPU0, _SB.PR00
+Còn nếu dùng OpenCore Bootloader, các bạn làm như <a href="https://lzhoang2601.github.io/#Hotpatch"> sau
+<!-- 1. Mở DSDT của máy bạn, tìm "Processor" nếu không có thì chuyển sang tìm "SCK0", dựa vào dòng đầu tiên ta sẽ được Scope _PR.CPU0 hoặc _PR.PR00, SCK0.C000, SCK0.CPU0, _SB.CPU0, _SB.PR00
 2. Nếu được Scope _PR.CPU0, bạn chỉ việc save SSDT-PLUG.dsl vào Clover/ACPI/patched
-   Còn nếu bạn nhận được Scope khác thì mở SSDT-PLUG.dsl, thay thế "_PR.CPU0" bằng Scope bạn nhận được rồi save SSDT-PLUG.dsl vào Clover/ACPI/patched
+   Còn nếu bạn nhận được Scope khác thì mở SSDT-PLUG.dsl, thay thế "_PR.CPU0" bằng Scope bạn nhận được rồi save SSDT-PLUG.dsl vào Clover/ACPI/patched -->
 </code></pre></div></div>
 
 <h2 id="pnlf">PNLF (Chỉnh độ sáng màn hình laptop)</h2>
@@ -419,17 +405,18 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 </code></pre></div></div>
 
 <h2 id="sleep">Sleep</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Còn nếu máy vẫn không chịu ngủ, bạn hãy thêm patch "(Sleep) LID0:_PRW to XPRW" vào config.plist/ACPI/DSDT/Patches của bạn
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nếu máy vẫn không chịu ngủ, bạn hãy thêm patch "(Sleep) LID0:_PRW to XPRW" vào config.plist/ACPI/DSDT/Patches của bạn
 </code></pre></div></div>
 
 <h2 id="sleepkey">SleepKey</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save SSDT-SleepDefine.dsl + SSDT-PTSWAK.dsl vào Clover/ACPI/patched
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để patch SleepKey, bạn hãy xem <a href="https://lzhoang2601.github.io/#sleepkey">video</a> sau
+<!-- 1. Save SSDT-SleepDefine.dsl + SSDT-PTSWAK.dsl vào Clover/ACPI/patched
     Tìm "PNP0C0E" trong DSDT của máy bạn, nếu không có kết quả, thêm SSDT-SLPB.dsl vào CLover/ACPI/patched
    Tìm tiếp "_SB.LID0" và "_SB.LID0.LPCB.LID0" trong DSDT của máy bạn, nếu có thì save SSDT_Sleep có tên tương ứng vào Clover/ACPI/patched
    Save SSDT-SleepKeyLID0-BTNV-Dell.dsl vào Clover/ACPI/patched nếu dùng Dell laptop, còn với Thinkpad laptop thì save SSDT-SleepKeyLID0-Q13Q2B-TP.dsl
 2. Thêm patch "(SleepKey) _LID to XLID" vào config.plist/ACPI/DSDT/Patches
    Với Dell laptop, thêm patch "(SleepKey) BTNV to XTNV" vào config.plist/ACPI/DSDT/Patches
-   Còn Thinkpad laptop, thêm patches "(SleepKey) _Q13 to XQ13" và "(SleepKey) _Q28 to XQ28" vào config.plist/ACPI/DSDT/Patches
+   Còn Thinkpad laptop, thêm patches "(SleepKey) _Q13 to XQ13" và "(SleepKey) _Q28 to XQ28" vào config.plist/ACPI/DSDT/Patches -->
 </code></pre></div></div>
 
 <h2 id="sound">Sound</h2>
