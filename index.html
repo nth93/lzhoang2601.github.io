@@ -423,7 +423,8 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 
 <h2 id="usb">USB</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để patch USB port, bạn hãy đọc <a href="https://hackintosh.vn/su-dung-clover-de-thuc-hien-patch-nong-apci">bài viết</a> hoặc <a href="https://lzhoang2601.github.io/#usb">video</a> sau
-<!-- 2. Bạn thêm SSDT-EH01.dsl hoặc SSDT-EH02.dsl, SSDT-XHC.dsl vào Clover/ACPI/patched tuỳ xem máy bạn có những USB Controler nào(bạn có dùng DSDT, Hackintool,... để xác định)
+<!-- 1. Với CPU 7,8,9 chipsets, bạn nên disable bus USB2.0 bằng SSDT-EHCX_OFF.dsl
+2. Bạn thêm SSDT-EH01.dsl hoặc SSDT-EH02.dsl, SSDT-XHC.dsl vào Clover/ACPI/patched tuỳ xem máy bạn có những USB Controler nào(bạn có dùng DSDT, Hackintool,... để xác định)
 3. Bạn tìm tiếp "ESEL", "XSEL" và "XWAK" trong DSDT của máy bạn, nếu có thì save SSDT có tên tương ứng vào Clover/ACPI/patched -->
 </code></pre></div></div>
 
