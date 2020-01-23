@@ -90,10 +90,6 @@
 
   -Để biết chi tiết, xem: <https://pikeralpha.wordpress.com/2017/01/12/debugging-sadd-issues/>
 
--Cung cấp các bản vá độc lập
-
-  Xem "AOAC cấm hiển thị độc lập"
-
 -Wake lên màn hình sáng, xem chương này
 
   Sử dụng *** SSDT-S3-vô hiệu hóa *** sẽ khiến bạn khó thức dậy. Để giải quyết vấn đề này, các phương pháp sau được sử dụng:
@@ -106,12 +102,3 @@
     -Xuất hiện `Thông báo (***. LID0, 0x80)`. `LID0` là tên thiết bị` PNP0C0D`.
   -Ví dụ: *** SSDT-FnQ-WakeScreen ***
 
-## Lưu ý
-
--Phương pháp này chỉ là giải pháp tạm thời. Với việc áp dụng rộng rãi công nghệ AOAC, tôi tin rằng sẽ sớm có giải pháp tốt hơn.
--Các máy khác ngoài `AOAC` cũng có thể thử phương pháp này.
--`AOAC` và 'S3` không liên quan gì đến giấc ngủ hay thức dậy. Các bản vá sau đây là không bắt buộc:
-  -PTSWAK Bản vá toàn diện và bản mở rộng
-  - "Phương pháp điều chỉnh giấc ngủ PNP0C0E"
-  - "Bản vá 0D6D"
-Phương pháp vá 01-5-AOAC

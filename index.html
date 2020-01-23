@@ -303,7 +303,10 @@
 </code></pre></div></div>
 
 <h2 id="aoac">AOAC (Công nghệ luôn luôn bật, luôn luôn kết nối)</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Để bắt đầu thì bạn cần phải biết:
+1. Patch này không liên quan đến Sleep và Wake
+2. Phương pháp này cũng chỉ là phương pháp tạm thời, chưa được hoàn hảo
+3. Nếu máy bạn có dGPU, hãy disable nó để patch được hoạt động
 </code></pre></div></div>
 
 <h2 id="battery">Battery (Các patch pin sẵn cho laptop)</h2>
@@ -323,7 +326,7 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 </code></pre></div></div>
 
 <h2 id="ecdt">ECDT</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mở ECDT.aml trong Clover/ACPI/origin (Nếu không có SSDT-ECDT.aml, bạn bỏ qua bước này, quay lại bước <a href="https://www.lzhoang2601.github.io/#ec">EC</a> rename bộ điều khiển EC của bạn về tên EC)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mở ECDT.aml trong Clover/ACPI/origin
 2. Kiểm tra phần Namepatch, chuyển LPC thành LPCB, EC hay H_EC, ECDV thành ECO。
 3. Xoá hết phần Raw Table Data... đi
 4. Save file ECDT.aml vừa chỉnh vào Clover/ACPI/patched
@@ -358,11 +361,11 @@ Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hã
 </code></pre></div></div>
 
 <h2 id="plug">PLUG</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nếu bạn dùng Clover Bootloader thì không cần quan tâm, để kích hoạt chỉ cần tich PluginType trong config.plist/ACPI/Generate Options
-Còn nếu dùng OpenCore Bootloader, các bạn làm như <a href="https://lzhoang2601.github.io/#Hotpatch"> sau
-<!-- 1. Mở DSDT của máy bạn, tìm "Processor" nếu không có thì chuyển sang tìm "SCK0", dựa vào dòng đầu tiên ta sẽ được Scope _PR.CPU0 hoặc _PR.PR00, SCK0.C000, SCK0.CPU0, _SB.CPU0, _SB.PR00
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Với những CPU Sandy Bridge, Ivy Bridge bạn chỉ việc tick KernelXCPM trong config.plist/Kernel and Patches của bạn, còn với các thế hệ CPU mới hơn các bạn làm như sau:
+1. Mở DSDT của máy bạn, tìm "Processor" nếu không có thì chuyển sang tìm "SCK0", dựa vào dòng đầu tiên ta sẽ được Scope _PR.CPU0 hoặc _PR.PR00, SCK0.C000, SCK0.CPU0, _SB.CPU0, _SB.PR00
 2. Nếu được Scope _PR.CPU0, bạn chỉ việc save SSDT-PLUG.dsl vào Clover/ACPI/patched
-   Còn nếu bạn nhận được Scope khác thì mở SSDT-PLUG.dsl, thay thế "_PR.CPU0" bằng Scope bạn nhận được rồi save SSDT-PLUG.dsl vào Clover/ACPI/patched -->
+   Còn nếu bạn nhận được Scope khác thì mở SSDT-PLUG.dsl, thay thế "_PR.CPU0" bằng Scope bạn nhận được rồi save SSDT-PLUG.dsl vào Clover/ACPI/patched
+3. Untick PluginType trong config.plist/Generate Options của bạn
 </code></pre></div></div>
 
 <h2 id="pnlf">PNLF (Chỉnh độ sáng màn hình laptop)</h2>
@@ -384,10 +387,6 @@ Còn nếu dùng OpenCore Bootloader, các bạn làm như <a href="https://lzho
 Còn nếu máy tính không shutdown được:
 1. Tìm "Processor" rồi đến "SCK0" để có được kết quả
 2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 còn DATA của CPU là 410 thì thay 0x000 thành 0x430 trong SSDT-EXT1-Shutdown.dsl rồi save vào Clover/ACPI/patched...
-</code></pre></div></div>
-
-<h2 id="rtc">RTC (Kích hoạt RTC device với yêu cầu của macOS)</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Patch này chỉ nên dùng nếu bạn mainboard 300-series và OpenCore Bootloader
 </code></pre></div></div>
 
 <h2 id="sata">SATA</h2>
@@ -428,7 +427,7 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 3. Bạn tìm tiếp "ESEL", "XSEL" và "XWAK" trong DSDT của máy bạn, nếu có thì save SSDT có tên tương ứng vào Clover/ACPI/patched -->
 </code></pre></div></div>
 
-<h2 id="wake">Wake</h2>
+<h2 id="wake">Wake (Giúp giải quyết vấn đề thức dậy sau vài giây)</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Mở DSDT của máy bạn, tìm kiếm lần lượt các địa chỉ sau:
     * EHC1 (_ADR, 0x001D0000)
     * EHC2 (_ADR, 0x001A0000)
@@ -448,7 +447,7 @@ Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA th�
 
 <h2 id="xosi">XOSI</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Save SSDT-XOSI.dsl vào Clover/APCI/patched
-    2. Thêm các patch có tên "(XOSI)..." vào config.plist/ACPI/DSDT/Patches
+2. Thêm các patch có tên "(XOSI)..." vào config.plist/ACPI/DSDT/Patches
 </code></pre></div></div>
 
           </div>

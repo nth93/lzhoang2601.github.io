@@ -8,14 +8,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Notify-batC#1</string>
+				<string>Name0D-03 to 00</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				hkJBVDA=
+				Cg0KAw==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -27,7 +27,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				hkJBVEM=
+				Cg0KAA==
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -42,14 +42,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Notify-batC#2</string>
+				<string>Name0D-04 to 00</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				hkJBVDE=
+				Cg0KBA==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -61,41 +61,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				hkJBVEM=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Notify-batC#3</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				hlwvBV9TQl9QQ0kwTFBDQkVDX19CQVQx
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>OemTableId</key>
-				<data>
-				</data>
-				<key>Replace</key>
-				<data>
-				hlwvBV9TQl9QQ0kwTFBDQkVDX19CQVRD
+				Cg0KAA==
 				</data>
 				<key>ReplaceMask</key>
 				<data>

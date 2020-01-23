@@ -1,9 +1,8 @@
-// ThinkPad-LPC
-DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
+// BATC
+
+DefinitionBlock("", "SSDT", 2, "hack", "BATC", 0)
 {
-    External(\_SB.PCI0.LPC.EC, DeviceObj)
-    
-    Scope(\_SB.PCI0.LPC.EC)
+    Scope(\_SB)
     {
         External(BAT0._HID, IntObj)
         External(BAT0._STA, MethodObj)
@@ -18,14 +17,12 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
         {
             Name(_HID, EisaId ("PNP0C0A"))
             Name(_UID, 0x02)
-
             Method(_INI)
             {
                 // disable original battery objects by setting invalid _HID
                 ^^BAT0._HID = 0
                 ^^BAT1._HID = 0
             }
-
             Method(CVWA, 3)
             // Convert mW to mA (or mWh to mAh)
             // Arg0 is mW or mWh (or mA/mAh in the case Arg2==0)
@@ -39,7 +36,6 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                 }
                 Return(Arg0)
             }
-
             Method(_STA)
             {
                 // call original _STA for BAT0 and BAT1
@@ -52,22 +48,18 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                 Else
                 {
                     Return (0)
-                }   
+                } 
             }
-
             Name(B0CO, 0x00) // BAT0 0/1 needs conversion to mAh
             Name(B1CO, 0x00) // BAT1 0/1 needs conversion to mAh
             Name(B0DV, 0x00) // BAT0 design voltage
             Name(B1DV, 0x00) // BAT1 design voltage
-
             Method(_BST)
-            {
-                // Local0 BAT0._BST
+            {                // Local0 BAT0._BST
                 // Local1 BAT1._BST
                 // Local2 BAT0._STA
                 // Local3 BAT1._STA
                 // Local4/Local5 scratch
-
                 // gather battery data from BAT0
                 Local0 = ^^BAT0._BST()
                 Local2 = ^^BAT0._STA()
@@ -75,7 +67,10 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                 {
                     // check for invalid remaining capacity
                     Local4 = DerefOf(Local0[2])
-                    If (!Local4 || Ones == Local4) { Local2 = 0; }
+                    If (!Local4 || Ones == Local4)
+                    {
+                        Local2 = 0
+                    }
                 }
                 // gather battery data from BAT1
                 Local1 = ^^BAT1._BST()
@@ -84,7 +79,10 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                 {
                     // check for invalid remaining capacity
                     Local4 = DerefOf(Local1[2])
-                    If (!Local4 || Ones == Local4) { Local3 = 0; }
+                    If (!Local4 || Ones == Local4)                    
+                    {
+                        Local3 = 0
+                    }
                 }
                 // find primary and secondary battery
                 If (0x1f != Local2 && 0x1f == Local3)
@@ -121,9 +119,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                         Local0[0] = 4
                     }
                     // if none of the above, just leave as BAT0 is
-
-                    // Note: Following code depends on _BIF being called before _BST to set B0CO and B1CO
-
+                    // Note: Depends on _BIF being called before _BST to set B0CO and B1CO
                     // _BST 1 - Battery Present Rate - Add BAT0 and BAT1 values
                     Local0[1] = CVWA(DerefOf(Local0[1]), B0DV, B0CO) + CVWA(DerefOf(Local1[1]), B1DV, B1CO)
                     // _BST 2 - Battery Remaining Capacity - Add BAT0 and BAT1 values
@@ -133,7 +129,6 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                 }
                 Return(Local0)
             } // _BST
-
             Method(_BIF)
             {
                 // Local0 BAT0._BIF
@@ -141,7 +136,6 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                 // Local2 BAT0._STA
                 // Local3 BAT1._STA
                 // Local4/Local5 scratch
-
                 // gather and validate data from BAT0
                 Local0 = ^^BAT0._BIF()
                 Local2 = ^^BAT0._STA()
@@ -149,13 +143,22 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                 {
                     // check for invalid design capacity
                     Local4 = DerefOf(Local0[1])
-                    If (!Local4 || Ones == Local4) { Local2 = 0; }
+                    If (!Local4 || Ones == Local4)
+                    {
+                        Local2 = 0
+                    }
                     // check for invalid max capacity
                     Local4 = DerefOf(Local0[2])
-                    If (!Local4 || Ones == Local4) { Local2 = 0; }
+                    If (!Local4 || Ones == Local4)
+                    {
+                        Local2 = 0
+                    }
                     // check for invalid design voltage
                     Local4 = DerefOf(Local0[4])
-                    If (!Local4 || Ones == Local4) { Local2 = 0; }
+                    If (!Local4 || Ones == Local4)
+                    {
+                        Local2 = 0
+                    }
                 }
                 // gather and validate data from BAT1
                 Local1 = ^^BAT1._BIF()
@@ -164,13 +167,22 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                 {
                     // check for invalid design capacity
                     Local4 = DerefOf(Local1[1])
-                    If (!Local4 || Ones == Local4) { Local3 = 0; }
+                    If (!Local4 || Ones == Local4)
+                    {
+                        Local3 = 0
+                    }
                     // check for invalid max capacity
                     Local4 = DerefOf(Local1[2])
-                    If (!Local4 || Ones == Local4) { Local3 = 0; }
+                    If (!Local4 || Ones == Local4)
+                    {
+                        Local3 = 0
+                    }
                     // check for invalid design voltage
                     Local4 = DerefOf(Local1[4])
-                    If (!Local4 || Ones == Local4) { Local3 = 0; }
+                    If (!Local4 || Ones == Local4)
+                    {
+                        Local3 = 0
+                    }
                 }
                 // find primary and secondary battery
                 If (0x1f != Local2 && 0x1f == Local3)
@@ -207,7 +219,6 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BATC", 0)
                 }
                 Return(Local0)
             } // _BIF
-        } // BATC
-    } // Scope(...)
+        }
+    }
 }
-// EOF

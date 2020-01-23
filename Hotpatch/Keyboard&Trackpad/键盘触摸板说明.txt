@@ -1,46 +1,46 @@
-*******
-一、问题
-键盘无法输入、触摸板无法工作。
+******
+I. Vấn đề
+Bàn phím không thể được nhập và touchpad không thể hoạt động.
 
-二、概述
-DSDT对PS2K(键盘)、PS2M(点输入设备，触摸板)、I2C设备(触摸板，触摸屏)有着详细的描述。
-对于PS2K和PS2M，通过设备_CID定义它们：
-PS2K：
+Tổng quan
+DSDT có một mô tả chi tiết về PS2K (bàn phím), PS2M (thiết bị nhập điểm, bàn phím cảm ứng) và thiết bị I2C (bàn phím cảm ứng, màn hình cảm ứng).
+Đối với PS2K và PS2M, chúng được xác định bởi device_CID:
+PS2K:
 PNP0303
 PNP030B
 PNP0320
 
-PS2M：
+PS2M:
 PNP0F03
 PNP0F0B
 PNP0F0E
 PNP0F12
 PNP0F13
 
-I2C设备遵循《I2C总线传输协议》。
+Các thiết bị I2C tuân theo "Giao thức truyền dẫn xe buýt I2C."
 
-三、问题产生的原因
-1 对于无I2C触摸板的机器，如果某种未知原因使PS2M被禁止，触摸板无法工作。
-2 具有I2C触摸板的机器，机器本身可能已经禁止了PS2M（也应该被禁止），而I2C可能还没有被
-  驱动或者驱动了但存在问题。这种情况下，触摸板有可能不工作，严重情况下，键盘无法输入。
-3 某些机器PS2M的HID采用动态注入方法，未知原因禁止了PS2M，也会出现(1)或者(2)问题。
+Thứ ba, nguyên nhân của vấn đề
+1 Đối với các máy không có bàn di chuột I2C, nếu PS2M bị vô hiệu hóa vì một số lý do không xác định, bàn di chuột sẽ không hoạt động.
+2 Đối với các máy có bàn di chuột I2C, bản thân máy có thể đã cấm PS2M (và nên bị cấm), trong khi I2C có thể không bị
+  Thúc đẩy hoặc thúc đẩy nhưng có vấn đề. Trong trường hợp này, bàn di chuột có thể không hoạt động. Trong trường hợp nghiêm trọng, bàn phím không thể nhập.
+3 HID của một số máy PS2M sử dụng phương pháp phun động. PS2M bị cấm vì những lý do không xác định và các sự cố (1) hoặc (2) cũng có thể xảy ra.
 
-四、解决方法
-制作仿冒补丁：SSDT-PS2N
-无论PS2M是否被禁止，我们避开关键词‘PS2M’，制作一个仿冒补丁。这个补丁不会和ACPI发生
-冲突，使点输入设备正常工作，保障键盘正常输入。
+Thứ tư, giải pháp
+Tạo các bản vá giả: SSDT-PS2N
+Bất kể liệu PS2M có bị cấm hay không, chúng tôi sẽ tránh từ khóa 'PS2M' và tạo một bản vá giả. Bản vá này sẽ không xảy ra với ACPI
+Xung đột làm cho thiết bị đầu vào điểm hoạt động bình thường và đảm bảo đầu vào bàn phím bình thường.
 
-1 对于无I2C触摸板的机器，任何情况下可以使用SSDT-PS2N。
-2 对于有I2C触摸板的机器，尝试使用SSDT-PS2N，待I2C正常后，删除SSDT-PS2N。
-3 也许你打算放弃I2C触摸板，那么参考下面的《I2C设备的特殊处理方法》。
+1 Đối với các máy không có bàn di chuột I2C, SSDT-PS2N có thể được sử dụng trong mọi trường hợp.
+2 Đối với các máy có bàn di chuột I2C, hãy thử sử dụng SSDT-PS2N. Sau khi I2C bình thường, hãy xóa SSDT-PS2N.
+3 Có thể bạn dự định từ bỏ bàn di chuột I2C, sau đó tham khảo "Phương pháp xử lý đặc biệt cho thiết bị I2C" bên dưới.
 
-五、I2C设备的特殊处理方法
-如果I2C触摸板无法驱动或者使用效果不理想，希望恢复使用点输入设备，建议：
-1 使用SSDT-PS2N。
-2 禁用I2C设备。见《禁用I2C总线》。
+Năm, phương pháp xử lý đặc biệt của thiết bị I2C
+Nếu bàn di chuột I2C không thể được điều khiển hoặc hiệu ứng sử dụng không lý tưởng và bạn muốn tiếp tục sử dụng thiết bị nhập điểm, bạn nên:
+1 Sử dụng SSDT-PS2N.
+2 Tắt thiết bị I2C. Xem Vô hiệu hóa Bus I2C.
 
-六、其他内容
-有关小红点漂移，触摸板空白等问题参见《杂项-触摸板空白/小红点漂移等》。
+Sáu, nội dung khác
+Để biết thêm thông tin về dấu chấm nhỏ màu đỏ và trống trên bàn di chuột, hãy xem Khác-Touchpad Trống / Dấu chấm màu đỏ, v.v.
 
 
-===end
+=== kết thúc

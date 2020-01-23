@@ -15,6 +15,16 @@
 			<array>
 				<dict>
 					<key>Comment</key>
+					<string>_DSM to XDSM</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X0RTTQ==</data>
+					<key>Replace</key>
+					<data>WERTTQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>(ALS0) ALSD._STA to ALSD.XSTA</string>
 					<key>Disabled</key>
 					<false/>
@@ -36,6 +46,36 @@
 					<data>WFNUQQ==</data>
 					<key>TgtBridge</key>
 					<data>QUxTRA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(BrightKey) KBC0 to PS2K</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>S0JDMA==</data>
+					<key>Replace</key>
+					<data>UFMySw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(BrightKey) KBD0 to PS2K</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>S0JEMA==</data>
+					<key>Replace</key>
+					<data>UFMySw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>(BrightKey) KBD_ to PS2K</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>S0JDXw==</data>
+					<key>Replace</key>
+					<data>UFMySw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -523,6 +563,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>(Wake) Method(GPRW,2,N) to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R1BSVwI=</data>
+					<key>Replace</key>
+					<data>WFBSVwI=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>(Wake) EH01:_PRW to XPRW</string>
 					<key>Disabled</key>
 					<false/>
@@ -673,6 +723,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>(Wake) Method(UPRW,2,N) to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>VVBSVwpwEg==</data>
+					<key>Replace</key>
+					<data>WFBSVwpwEg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>(XOSI) OSID to XSID</string>
 					<key>Disabled</key>
 					<false/>
@@ -693,16 +753,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(XOSI) _DSM to XDSM</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X0RTTQ==</data>
-					<key>Replace</key>
-					<data>WERTTQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change APSS to APXX</string>
 					<key>Disabled</key>
 					<false/>
@@ -710,26 +760,6 @@
 					<data>QVBTUw==</data>
 					<key>Replace</key>
 					<data>QVBYWA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>R1BSVwI=</data>
-					<key>Replace</key>
-					<data>WFBSVwI=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(UPRW,2,N) to XPRW, pair with SSDT-UPRW.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>VVBSVwpwEg==</data>
-					<key>Replace</key>
-					<data>WFBSVwpwEg==</data>
 				</dict>
 			</array>
 		</dict>

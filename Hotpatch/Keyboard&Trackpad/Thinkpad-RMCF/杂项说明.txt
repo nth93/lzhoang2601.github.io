@@ -1,36 +1,36 @@
-*******
-一、说明
-所有补丁属于键盘类补丁，要求键盘名称是PS2K。
+******
+I. Mô tả
+Tất cả các bản vá là các bản vá loại bàn phím và yêu cầu tên bàn phím phải là PS2K.
 
-二、补丁
-SSDT-Keyboard-TP————TP键盘补丁，含小红点漂移补丁1
-SSDT-RMCF-RedPoint-TP————TP小红点漂移补丁2
-SSDT-RMCF-Trackpad-enable————强制开启触摸板设置选项
-SSDT-RMCF-PrtSc-disable————禁止PrtSc。部分机器“PrtSc”按键可以禁止触摸板，该补丁
-			   使“禁止触摸板功能”失效。
-SSDT-RMCF-TrackpadAndPrtSc————补丁合并样本
+Thứ hai, bản vá
+SSDT-Bàn phím-TP Miếng vá bàn phím TP, bao gồm bản vá lỗi nhỏ màu đỏ
+SSDT-RMCF-RedPoint-TP Bản đồ trẻ em TP Bản vá lỗi nhỏ màu đỏ chấm 2
+SSDT-RMCF-Trackpad kích hoạt biểu tượng trên phạm vi kích hoạt tùy chọn cài đặt bàn di chuột
+SSDT-RMCF-PrtSc-vô hiệu hóa giai đoạn trước khi chơi PrtSc bị vô hiệu hóa. Một số máy "Nút PrtSc" có thể vô hiệu hóa bàn di chuột, bản vá này
+Vô hiệu hóa chức năng Vô hiệu hóa Touch Pad.
+Mẫu hợp nhất bản vá SSDT-RMCF-TrackpadAndPrtSc
 
-三、其他设备名称要求
-LPC名称：LPCB（见基本更名）
+Thứ ba, yêu cầu tên thiết bị khác
+Tên LPC: LPCB (xem thay đổi tên cơ bản)
 
-四、使用
-1 SSDT-Keyboard-TP
-该补丁适用于Thinkpad。
+Thứ tư, sử dụng
+1 SSDT-Bàn phím-TP
+Bản vá này áp dụng cho Thinkpad.
 
-修改补丁里"RM,oem-id"和"RM,oem-table-id"的子项。选择适合自己的。
-如："T420"、"T460"、"T560"、"Thinkpad_ClickPad"等。
+Sửa đổi các mục con của "RM, OEM-id" và "RM, OEM-table-id" trong bản vá. Chọn những gì phù hợp với bạn.
+Ví dụ: "T420", "T460", "T560", "Thinkpad_ClickPad", v.v.
 
-2 SSDT-RMCF-***
-包涵“RMCF”的补丁不允许2个以上同时使用，如果有多个补丁使用要求，必须合并后再使用。
-参见合并样本：SSDT-RMCF-TrackpadAndPrtSc
+2 SSDT-RMCF - ***
+Các bản vá có chứa "RMCF" không được phép sử dụng cùng một lúc. Nếu có nhiều yêu cầu vá, chúng phải được kết hợp và sử dụng.
+Xem mẫu kết hợp: SSDT-RMCF-TrackpadAndPrtSc
 
-更多的键盘类补丁见：
-https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/src
-
-
-五、注意
-使用SSDT-RMCF-Trackpad必须保证VoodooPS2Controller.kext\Contents\PlugIns\下有：
-VoodooPS2Mouse.kext。
+Để biết thêm các bản vá bàn phím, xem:
+https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controll/src
 
 
-===end
+Năm, chú ý
+Để sử dụng SSDT-RMCF-Trackpad, bạn phải đảm bảo rằng VoodooPS2Controll.kext \ Nội dung \ PlugIns \ có:
+VoodooPS2Mouse.kext.
+
+
+=== kết thúc
