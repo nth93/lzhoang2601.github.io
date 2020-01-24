@@ -1790,7 +1790,7 @@ url("./fonts/icofont.woff") format("woff");
 
 .icofont-brand-youtube:before
 {
-  content: "\e95f";
+  content: "\ecbb";
 }
 
 .icofont-brand-zain:before
@@ -7130,7 +7130,7 @@ url("./fonts/icofont.woff") format("woff");
 
 .icofont-youtube:before
 {
-  content: "\ed8b";
+  content: "\ecbb";
 }
 
 .icofont-zencart:before
