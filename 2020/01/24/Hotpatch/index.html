@@ -61,7 +61,7 @@
 <div id="top" style="display: block;">
     <div class="bar" style="width: 0;"></div>
     <div class="navigation animated fadeIn fast delay-1s">
-        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="lzhoang2601.github.io">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://lzhoang2601.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
         <h3 class="subtitle">Hotpatch</h3>
         <div class="social">
@@ -212,11 +212,11 @@
 <blockquote>
 <p>Nếu bạn dùng Clover Bootloader thì không cần quan tâm, để kích hoạt chỉ cần tich PluginType trong config.plist/ACPI/Generate Options<br>Còn nếu dùng OpenCore Bootloader, các bạn làm như  sau</p>
 </blockquote>
-<p><strong>PNLF (Chỉnh độ sáng màn hình laptop)</strong></p>
+<p id="PNLF"><strong>PNLF (Chỉnh độ sáng màn hình laptop)</strong></p>
 <blockquote>
 <p>Để rõ hơn bạn có thể xem <a href="https://hackintosh.vn/su-dung-clover-de-thuc-hien-patch-nong-apci" target="_blank" rel="noopener">bài viết</a> hoặc <a href="">video sau</a></p>
 </blockquote>
-<p><strong>PTSWAK</strong></p>
+<p id="PTSWAK"><strong>PTSWAK</strong></p>
 <blockquote>
 <ol>
 <li>Save file PTSWAK.dsl vào Clover/ACPI/patched dưới dạng .aml</li>
@@ -224,7 +224,7 @@
 <li>Dựa vào Method đã xác định trên, tìm kiếm các patch “(PTSWAK)…” phù hợp thêm vào config.plist/ACPI/Patches của bạn</li>
 </ol>
 </blockquote>
-<p><strong>PTSWAK-Bản vá mở rộng</strong></p>
+<p id="PTSWAKmore"><strong>PTSWAK-Bản vá mở rộng</strong></p>
 <blockquote>
 <p>Nếu bạn gặp khó khăn trong việc đánh thức laptop sau sleep, bạn save SSDT-EXT4-WakeScreen.dsl vào Clover/APCI/patched<br>Còn nếu máy tính không shutdown được:</p>
 <ol>
@@ -232,38 +232,34 @@
 <li>Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 còn DATA của CPU là 410 thì thay 0x000 thành 0x430 trong SSDT-EXT1-Shutdown.dsl rồi save vào Clover/ACPI/patched…</li>
 </ol>
 </blockquote>
-<p><strong>RTC (Kích hoạt RTC device với yêu cầu của macOS)</strong></p>
-<blockquote>
-<p>Patch này chỉ nên dùng nếu bạn mainboard 300-series và OpenCore Bootloader</p>
-</blockquote>
-<p><strong>SATA</strong></p>
+<p id="SATA"><strong>SATA</strong></p>
 <blockquote>
 <p>Thêm SATA-100-series-unsupported.kext vào CKO nếu có pci 8086:a103 và 8086:9d03<br>Thêm SATA-200-series-unsupported.kext vào CKO nếu có pci 8086:a282<br>Thêm SATA-RAID-unsupported.kext vào CKO nếu có pci 8086:282A, 8086:2822<br>Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA thì hãy thêm AHCIinjectport.kext hoặc Sata-unsupported.kext</p>
 </blockquote>
-<p><strong>SBUS</strong></p>
+<p id="SBUS"><strong>SMBUS</strong></p>
 <blockquote>
 <ol>
 <li>Tìm “0x001F0003” nếu dùng CPU Broadwell trở về trước, “0x001F0004” nếu dùng CPU Skylake hoặc mới hơn trong DSDT của máy bạn</li>
 <li>Nếu đã có Device (SBUS) rồi thì thôi<br>Nếu không có thì save SSDT-SBUS.dsl vào Clover/APCI/patched<br>Còn nếu bạn nhận lại “Device (SMBU)” sau khi tìm kiếm, bạn đổi hết “SBUS” thành “SMBU” trong SSDT-SBUS.dsl rồi save vào Clover/ACPI/patched. Với các Device khác bạn cũng làm tương tự</li>
 </ol>
 </blockquote>
-<p><strong>Sleep</strong></p>
+<p id="Sleep"><strong>Sleep</strong></p>
 <blockquote>
 <p>Nếu máy vẫn không chịu ngủ, bạn hãy thêm patch “(Sleep) LID0:_PRW to XPRW” vào config.plist/ACPI/DSDT/Patches của bạn</p>
 </blockquote>
-<p><strong>SleepKey</strong></p>
+<p id="SleepKey"><strong>SleepKey</strong></p>
 <blockquote>
 <p>Để patch SleepKey, bạn hãy xem <a href="">video sau</a></p>
 </blockquote>
-<p><strong>Sound</strong></p>
+<p id="Sound"><strong>Sound</strong></p>
 <blockquote>
 <p>Để patch Sound, bạn hãy đọc <a href="https://hackintosh.vn/kich-hoat-am-thanh-sau-khi-cai-hackintosh" target="_blank" rel="noopener">bài viết</a> hoặc <a href="">video sau</a></p>
 </blockquote>
-<p><strong>USB</strong></p>
+<p id="USB"><strong>USB</strong></p>
 <blockquote>
 <p>Để patch USB port, bạn hãy đọc <a href="https://hackintosh.vn/su-dung-clover-de-thuc-hien-patch-nong-apci" target="_blank" rel="noopener">bài viết</a> hoặc <a href="">video sau</a></p>
 </blockquote>
-<p><strong>Wake</strong></p>
+<p id="Wake"><strong>Wake</strong></p>
 <blockquote>
 <ol>
 <li>Mở DSDT của máy bạn, tìm kiếm lần lượt các địa chỉ sau:<br>  EHC1 (_ADR, 0x001D0000)<br>  EHC2 (_ADR, 0x001A0000)<br>  XHC, XHCI, XHC1 (_ADR, 0x00140000)<br>  XDCI (_ADR, 0x00140001)<br>  <em>Sound:</em><br>   Với CPU Broadwell trở về trước: HDEF hoặc AZAL (_ADR, 0x001B0000)<br>   Còn từ Skylake trở đi: HDAS (_ADR, 0x001F0003)<br>  <em>Ethernet:</em><br>   Với CPU Broadwell trở về trước: GLAN hoặc IGBE hoặc khác (_ADR, 0x00190000)<br>   Còn từ Skylake trở đi: GLAN hoặc IGBE hoặc khác (_ADR, 0x001F0006)<br>  <em>CNVW (_ADR, 0x00140003)</em><br>Kiểm tra tiếp xem thiết bị có ‘_PRW’ hay không, nếu có thì tìm tiếp ‘0x0D’ hoặc ‘0x6D’ trong Method (_PRW,..) rồi lưu lại</li>
@@ -271,7 +267,7 @@
 <li>Mở SSDT-Sleep_PRW.dsl, nếu trong Method (_PRW,..) là 0x0D thì thay 0x6D thành 0x0D rồi save vào Clover/ACPI/patched với dạng .aml</li>
 </ol>
 </blockquote>
-<p><strong>XOSI</strong></p>
+<p id="XOSI"><strong>XOSI</strong></p>
 <blockquote>
 <ol>
 <li>Save SSDT-XOSI.dsl vào Clover/APCI/patched</li>
@@ -337,7 +333,7 @@
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#PTSWAK"> <span class="toc-text">PTSWAK</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#PTSWAKmore"> <span class="toc-text">PTSWAK-Bản vá mở rộng</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#SATA"> <span class="toc-text">SATA</span></a></li>
-                        <li class="toc-item toc-level-1"><a class="toc-link" href="#SBUS"> <span class="toc-text">SBUS</span></a></li>
+                        <li class="toc-item toc-level-1"><a class="toc-link" href="#SBUS"> <span class="toc-text">SMBUS</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#Sleep"> <span class="toc-text">Sleep</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#SleepKey"> <span class="toc-text">SleepKey</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#Sound"> <span class="toc-text">Sound</span></a></li>
