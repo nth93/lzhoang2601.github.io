@@ -1,0 +1,119 @@
+:root {
+  --font-color: #000;
+  --night-font-color: #ddd;
+  --primary: #b2fefa;
+  --secondary: #0ed2f7;
+  --dark: #0052d4;
+  --gradient-light: #5d9eea;
+  --gradient-middle: #0f27b5;
+  --gradient-dark: #100e17;
+  --code-gradient-light: #cff0ff;
+  --code-gradient-dark: #afcafd;
+  --maxwidth: 1284px;
+}
+
+#ytb {
+    background: transparent url(../img/ytb.png) no-repeat center top fixed;
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
+  #ytb .block-video {
+    margin-bottom: 10px;
+  }
+}
+
+#ytb .block-video img {
+  width: 100%;
+}
+
+#ytb .block-video .content-video {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  min-height: 125px;
+  padding: 24px 10px;
+  width: 100%;
+}
+
+#ytb .block-video .content-video h4 {
+  line-height: 24px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-weight: normal;
+  letter-spacing: 0;
+  font-size: 16px;
+}
+
+#ytb .block-video .content-video h4 a {
+  color: #71c55d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#ytb .block-video .content-video h4 a:hover {
+  color: #505050;
+}
+
+#ytb .block-video .content-video > span {
+  float: left;
+  font-size: 12px;
+}
+
+#ytb .block-video .content-video a.readmore {
+  color: #71c55d;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+#ytb .block-video .content-video a.readmore:hover {
+  color: #505050;
+}
+
+#ytb .btn-ytb {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 11px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-bottom: 20px;
+  border: 2px solid #71c55d;
+  background: none;
+  color: #71c55d;
+  text-decoration: none;
+ margin: 0 auto; text-align: center; display: block;
+ width: 25%;
+}
+
+#ytb .btn-ytb:hover {
+  background: nope;
+  color: #505050;
+}
+
+#ytb .btns a {
+  color: #555;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 4px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+@media (max-width: 575px) {
+  #ytb .btns a {
+    margin: 4px 8px;
+  }
+}
+
+#ytb .btns a:hover {
+  color: #71c55d;
+}
+
