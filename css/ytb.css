@@ -24,7 +24,7 @@
 }
 
 #ytb .block-video img {
-  width: 100%;
+  width: 640%;
 }
 
 #ytb .block-video .content-video {
@@ -45,13 +45,13 @@
 }
 
 #ytb .block-video .content-video h4 a {
-  color: #71c55d;
+  color: #03a9f4;
   text-decoration: none;
   transition: 0.3s;
 }
 
 #ytb .block-video .content-video h4 a:hover {
-  color: #505050;
+  color: #03a9f4;
 }
 
 #ytb .block-video .content-video > span {
@@ -60,7 +60,7 @@
 }
 
 #ytb .block-video .content-video a.readmore {
-  color: #71c55d;
+  color: #fff;
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
@@ -70,7 +70,7 @@
 }
 
 #ytb .block-video .content-video a.readmore:hover {
-  color: #505050;
+  color: #03a9f4;
 }
 
 #ytb .btn-ytb {
@@ -84,9 +84,9 @@
   border-radius: 50px;
   transition: 0.5s;
   margin-bottom: 20px;
-  border: 2px solid #71c55d;
+  border: 2px solid #03a9f4;
   background: none;
-  color: #71c55d;
+  color: #03a9f4;
   text-decoration: none;
  margin: 0 auto; text-align: center; display: block;
  width: 25%;
@@ -94,11 +94,11 @@
 
 #ytb .btn-ytb:hover {
   background: nope;
-  color: #505050;
+  color: #fff;
 }
 
 #ytb .btns a {
-  color: #555;
+  color: #fff;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
@@ -114,6 +114,6 @@
 }
 
 #ytb .btns a:hover {
-  color: #71c55d;
+  color: #03a9f4;
 }
 
