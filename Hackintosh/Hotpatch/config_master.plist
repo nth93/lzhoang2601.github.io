@@ -573,153 +573,43 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(Wake) EH01:_PRW to XPRW</string>
+					<string>(Wake) Name0D-03 to 00</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>X1BSVw==</data>
+					<data>Cg0KAw==</data>
 					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>RUgwMQ==</data>
+					<data>Cg0KAA==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(Wake) EH02:_PRW to XPRW</string>
+					<string>(Wake) Name0D-04 to 00</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>X1BSVw==</data>
+					<data>Cg0KBA==</data>
 					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>RUgwMg==</data>
+					<data>Cg0KAA==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(Wake) XHC:_PRW to XPRW</string>
+					<string>(Wake) Name6D-03 to 00</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>X1BSVw==</data>
+					<data>Cm0KAw==</data>
 					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>WEhDXw==</data>
+					<data>Cm0KAA==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(Wake) XDCI:_PRW to XPRW</string>
+					<string>(Wake) Name6D-04 to 00</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>X1BSVw==</data>
+					<data>Cm0KBA==</data>
 					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>WERDSQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(Wake) HDEF:_PRW to XPRW</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1BSVw==</data>
-					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>SERFRg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(Wake) HDAS:_PRW to XPRW</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1BSVw==</data>
-					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>SERBUw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(Wake) AZAL:_PRW to XPRW</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1BSVw==</data>
-					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>QVpBTA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(Wake) GLAN:_PRW to XPRW</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1BSVw==</data>
-					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>R0xBTg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(Wake) IGBE:_PRW to XPRW</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1BSVw==</data>
-					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>SUdCRQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(Wake) CNVW:_PRW to XPRW</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1BSVw==</data>
-					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>Q05WVw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(Wake) Scope:EH01:_PRW to XPRW</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1NCX1BDSTBFSEMxFC1fUFJXAA==</data>
-					<key>Replace</key>
-					<data>X1NCX1BDSTBFSEMxFC1YUFJXAA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(Wake) Scope:EH02:_PRW to XPRW</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1NCX1BDSTBFSEMyFC1fUFJXAA==</data>
-					<key>Replace</key>
-					<data>X1NCX1BDSTBFSEMyFC1YUFJXAA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(Wake) Scope:XHC:_PRW to XPRW</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1NCX1BDSTBYSENfFC1fUFJXAA==</data>
-					<key>Replace</key>
-					<data>X1NCX1BDSTBYSENfFC1YUFJXAA==</data>
+					<data>Cm0KAA==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
