@@ -138,26 +138,33 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-<h2 id="hotpatch"><a href="#HotPatch" class="headerlink" title="Hot Patch"></a><a href="https://github.com/slimulv1/slimulv1.github.io/tree/master/Hotpatch" target="_blank" rel="noopener"><p style="text-align: center; color: #42d2ca; font-family: Lato-Thin ; "><b><strong>Hot Patch</strong></b></p></a></h2><p><strong>Nếu có yêu cầu thêm patch vào Clover/APCI/patched thì bắt buộc cần save và các patch cho config.plist đã có đầy đủ ở config_master.plist(trừ Battery) nhé!</strong><br><strong>ALS0 (Cảm biến ánh sáng)</strong></p>
+<h2 id="hotpatch"><a href="#HotPatch" class="headerlink" title="HotPatch"></a><a href="https://github.com/slimulv1/slimulv1.github.io/tree/master/Hotpatch" target="_blank" rel="noopener"><p style="text-align: center; color: #42d2ca; font-family: Lato-Thin ; "><b><strong>Hot Patch</strong></b></p></a></h2>
+<p><strong>Nếu có yêu cầu thêm patch vào Clover/APCI/patched thì bắt buộc cần save và các patch cho config.plist đã có đầy đủ ở config_master.plist(trừ Battery) nhé!</strong><br><strong id="ALS0">ALS0 (Cảm biến ánh sáng)</strong></p>
 <blockquote>
 <ol>
 <li>Tìm “ACPI0008” trong DSDT của máy bạn</li>
 <li>Nếu có, bạn save SSDT-ALSD.dsl vào Clover/ACPI/patched và thêm tiếp patch có đầu “(ALS0)…” vào config.plist/ACPI/DSDT/Patches của bạn.<br>Nếu tìm mà không có, bạn chỉ việc save SSDT-ALS0.dsl vào Clover/APCI/patched là được</li>
 </ol>
 </blockquote>
-<p><strong>AOAC (Công nghệ luôn luôn bật, luôn luôn kết nối)</strong></p>
-<p><strong>Battery (Các patch pin sẵn cho laptop)</strong></p>
+<p id="AOAC"><strong>AOAC (Công nghệ luôn luôn bật, luôn luôn kết nối)</strong></p>
+<blockquote>
+<ol>
+<li>Để bắt đầu thì bạn cần phải biết:</li>
+<li>1. Patch này không liên quan đến Sleep và Wake<br> 2. Phương pháp này cũng chỉ là phương pháp tạm thời, chưa được hoàn hảo<br> 3. Nếu máy bạn có dGPU, hãy disable nó để patch được hoạt động</li>
+</ol>
+</blockquote>
+<p id="Battery"><strong>Battery (Các patch pin sẵn cho laptop)</strong></p>
 <blockquote>
 <ol>
 <li>Chọn đúng SSDT patch pin cho laptop của mình rồi save vào Clover/ACPI/patched .</li>
 <li>Thêm các patches từ config_(tên máy).plist vào config.plist/ACPI/DSDT/Patches của bạn.<br>Nếu không tìm thấy SSDT patch pin phù hợp với laptop mình, bạn hãy patch thủ công theo <a href="https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/" target="_blank" rel="noopener">guide</a></li>
 </ol>
 </blockquote>
-<p><strong>BrightKey (Hotkey tăng giảm độ sáng màn hình)</strong></p>
+<p id="BrightKey"><strong>BrightKey (Hotkey tăng giảm độ sáng màn hình)</strong></p>
 <blockquote>
-<p>Cách làm các bạn xem ở video sau</p>
+<p>Cách làm các bạn xem ở <a href="https://lzhoang2601.github.io/2020/01/24/Hotpatch/#BrightKey">video</a> sau</p>
 </blockquote>
-<p><strong>EC</strong></p>
+<p id="EC"><strong>EC</strong></p>
 <blockquote>
 <ol>
 <li>Tìm “PNP0C09” trong DSDT của máy bạn</li>
@@ -165,7 +172,7 @@
 <li>Thêm SSDT-EC.dsl vào Clover/ACPI/patched để tạo EC ảo điều khiển nguồn USB</li>
 </ol>
 </blockquote>
-<p><strong>ECDT</strong></p>
+<p id="ECDT"><strong>ECDT</strong></p>
 <blockquote>
 <ol>
 <li>Mở ECDT.aml trong Clover/ACPI/origin (Nếu không có SSDT-ECDT.aml, bạn bỏ qua bước này, quay lại bước EC rename bộ điều khiển EC của bạn về tên EC)</li>
@@ -175,7 +182,7 @@
 <li>Thêm ECDT vào config.plist/ACPI/Drop Table</li>
 </ol>
 </blockquote>
-<p><strong>Fan (Hiển thị tốc độ quạt)</strong></p>
+<p id="FanSpeed"><strong>FanSpeed (Hiển thị tốc độ quạt)</strong></p>
 <blockquote>
 <ol>
 <li>Cho ACPIPoller.kext vào CKO</li>
@@ -183,34 +190,35 @@
 <li>Với Dell laptop, bạn save SSDT-Fans-Dell.dsl vào Clover/ACPI/patched<br>Với Thinkpad laptop, bạn save 1 trong 2 SSDT-Fans-TP.dsl hoặc SSDT-TEMPToFans-TP.dsl, không được dùng 2 SSDT này cũng lúc<br>Với Asus laptop, bạn làm theo <a href="https://osxlatitude.com/forums/topic/10244-how-to-implement-custom-fan-control-on-asus-laptops/" target="_blank" rel="noopener">guide sau</a></li>
 </ol>
 </blockquote>
-<p><strong>IMEI</strong></p>
+<p id="IMEI"><strong>IMEI</strong></p>
 <blockquote>
 <ol>
 <li>Save SSDT-IMEI.dsl vào Clover/APCI/patched với các máy dùng CPU Sandy Brigde, Ivy Brigde</li>
 <li>Tìm “HECI” và “MEI” trong DSDT của máy bạn rồi thêm patch “(IMEI)…” phù hợp vào config.plist/ACPI/Patches</li>
 </ol>
 </blockquote>
-<p><strong>Keyboard&amp;Trackpad</strong></p>
+<p id="Keyboard&Trackpad"><strong>Keyboard&amp;Trackpad</strong></p>
 <blockquote>
 <p>Để patch Trackpad I2C, các bạn có thể xem <a href="https://hackintosh.vn/trackpad-on-hackintosh-voi-giao-thu-i2c" target="_blank" rel="noopener">bài viết</a> hoặc <a href="">video sau</a></p>
 </blockquote>
-<p><strong>LPC</strong></p>
+<p id="LPC"><strong>LPC</strong></p>
 <blockquote>
 <ol>
 <li>Save SSDT-LPC.dsl vào Clover/APCI/patched nếu trong DSDT của máy bạn không tìm thấy “LPCB”</li>
 <li>Thêm patch “(LPC) LPC to LPCB” vào config.plist/ACPI/Patches</li>
 </ol>
 </blockquote>
-<p><strong>NullEthernet (Tạo 1 Lan ảo)</strong></p>
+<p id="NullEthernet"><strong>NullEthernet (Tạo 1 Lan ảo)</strong></p>
 <blockquote>
 <ol>
 <li>Thêm NullEthernet.kext và NullEthernetInjector.kext vào CKO</li>
 <li>Save SSDT-LPC.dsl vào Clover/APCI/patched</li>
 </ol>
 </blockquote>
-<p><strong>PLUG</strong></p>
+<p id="PLUG"><strong>PLUG</strong></p>
 <blockquote>
-<p>Nếu bạn dùng Clover Bootloader thì không cần quan tâm, để kích hoạt chỉ cần tich PluginType trong config.plist/ACPI/Generate Options<br>Còn nếu dùng OpenCore Bootloader, các bạn làm như  sau</p>
+<p>Với những CPU Sandy Bridge, Ivy Bridge bạn chỉ việc tick KernelXCPM trong config.plist/Kernel and Patches của bạn, còn với các thế hệ CPU mới hơn các bạn làm như sau:</p>
+<ol><li>1. Mở DSDT của máy bạn, tìm "Processor" nếu không có thì chuyển sang tìm "SCK0", dựa vào dòng đầu tiên ta sẽ được Scope _PR.CPU0 hoặc _PR.PR00, SCK0.C000, SCK0.CPU0, _SB.CPU0, _SB.PR00<br> 2. Nếu được Scope _PR.CPU0, bạn chỉ việc save SSDT-PLUG.dsl vào Clover/ACPI/patched<br> Còn nếu bạn nhận được Scope khác thì mở SSDT-PLUG.dsl, thay thế "_PR.CPU0" bằng Scope bạn nhận được rồi save SSDT-PLUG.dsl vào Clover/ACPI/patched<br> 3. Untick PluginType trong config.plist/Generate Options của bạn</li></ol>
 </blockquote>
 <p id="PNLF"><strong>PNLF (Chỉnh độ sáng màn hình laptop)</strong></p>
 <blockquote>
@@ -250,6 +258,13 @@
 <p id="SleepKey"><strong>SleepKey</strong></p>
 <blockquote>
 <p>Để patch SleepKey, bạn hãy xem <a href="">video sau</a></p>
+<!-- 1. Save SSDT-SleepDefine.dsl + SSDT-PTSWAK.dsl vào Clover/ACPI/patched
+    Tìm "PNP0C0E" trong DSDT của máy bạn, nếu không có kết quả, thêm SSDT-SLPB.dsl vào CLover/ACPI/patched
+   Tìm tiếp "_SB.LID0" và "_SB.LID0.LPCB.LID0" trong DSDT của máy bạn, nếu có thì save SSDT_Sleep có tên tương ứng vào Clover/ACPI/patched
+   Save SSDT-SleepKeyLID0-BTNV-Dell.dsl vào Clover/ACPI/patched nếu dùng Dell laptop, còn với Thinkpad laptop thì save SSDT-SleepKeyLID0-Q13Q2B-TP.dsl
+2. Thêm patch "(SleepKey) _LID to XLID" vào config.plist/ACPI/DSDT/Patches
+   Với Dell laptop, thêm patch "(SleepKey) BTNV to XTNV" vào config.plist/ACPI/DSDT/Patches
+   Còn Thinkpad laptop, thêm patches "(SleepKey) _Q13 to XQ13" và "(SleepKey) _Q28 to XQ28" vào config.plist/ACPI/DSDT/Patches -->
 </blockquote>
 <p id="Sound"><strong>Sound</strong></p>
 <blockquote>
