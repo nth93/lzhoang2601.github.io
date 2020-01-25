@@ -160,8 +160,8 @@
 <p id="ECDT"><strong>ECDT</strong></p>
 <blockquote>
 <ol>
-<li>Mở ECDT.aml trong Clover/ACPI/origin (Nếu không có SSDT-ECDT.aml, bạn bỏ qua bước này, quay lại bước EC rename bộ điều khiển EC của bạn về tên EC)</li>
-<li>Kiểm tra phần Namepatch, chuyển LPC thành LPCB, EC hay H_EC, ECDV thành ECO。</li>
+<li>Mở ECDT.aml trong Clover/ACPI/origin</li>
+<li>Kiểm tra phần Namepatch, nếu đường dẫn chỉ đến đúng device EC thì bạn xoá SSDT-EC rồi quay lại bước <a class="toc-link" href="#EC"> <span class="toc-text">sau</span></a> rename bộ điều khiển EC của bạn về tên EC, còn không thì chuyển LPC thành LPCB, EC hay H_EC, ECDV thành ECO。</li>
 <li>Xoá hết phần Raw Table Data… đi</li>
 <li>Save file ECDT.aml vừa chỉnh vào Clover/ACPI/patched</li>
 <li>Thêm ECDT vào config.plist/ACPI/Drop Table</li>
