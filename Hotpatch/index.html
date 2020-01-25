@@ -239,13 +239,20 @@
 <p id="SleepKey"><strong>SleepKey</strong></p>
 <blockquote>
 <p>Để patch SleepKey, bạn hãy xem <a href="">video sau</a></p>
-<!-- 1. Save SSDT-SleepDefine.dsl + SSDT-PTSWAK.dsl vào Clover/ACPI/patched
-    Tìm "PNP0C0E" trong DSDT của máy bạn, nếu không có kết quả, thêm SSDT-SLPB.dsl vào CLover/ACPI/patched
-   Tìm tiếp "_SB.LID0" và "_SB.LID0.LPCB.LID0" trong DSDT của máy bạn, nếu có thì save SSDT_Sleep có tên tương ứng vào Clover/ACPI/patched
-   Save SSDT-SleepKeyLID0-BTNV-Dell.dsl vào Clover/ACPI/patched nếu dùng Dell laptop, còn với Thinkpad laptop thì save SSDT-SleepKeyLID0-Q13Q2B-TP.dsl
+<!--
+Trước khi tiến hành patch thì cần biết chút về 2 chế độ ngủ và MODE:
+    "PNP0C0E"(SLPB) - Thiết bị nút ngủ. Về đặc điểm giấc ngủ: Quá trình ngủ của thiết bị này nhanh, không thể chấm dứt. Nếu bạn dùng chế độ này thì cần chỉnh MODE = 1
+    "PNP0C0D"(LID0) - Thiết bị nắp. Về đặc điểm giấc ngủ: Ngủ ngon, nhấn nút ngủ lần nữa để ngừng ngủ ngay lập tức; khi kết nối màn hình ngoài, bạn nhấn nút ngủ thì màn laptop tắt, màn ngoài vẫn bình thường. Nếu bạn dùng chế độ này thì cần chỉnh MODE = 0
+1. Tuỳ chỉnh MODE theo nhu cầu rồi save SSDT-PTSWAK.dsl vào Clover/ACPI/patched
+   Tìm "PNP0C0E" trong DSDT của máy bạn, nếu không có kết quả, thêm SSDT-SLPB.dsl vào CLover/ACPI/patched
+   Tìm tiếp địa chỉ PNP0C0D "_SB.LID0" và "_SB.LID0.LPCB.LID0" trong DSDT của máy bạn, nếu có thì save SSDT-_ có tên tương ứng vào Clover/ACPI/patched
+   Dựa vào địa chỉ PNP0C0D vừa tìm được mà thay đổi trong SSDT-QXX.dsl, nếu địa chỉ là "_SB.LID0.LPCB.LID0" thì thay thế toàn bộ "_SB.LID0" thành "_SB.LID0.LPCB.LID0"
+   Tìm vị trí nút ngủ _Qxx, bạn thực hiện tìm kiếm trong DSDT toàn văn `Notify (***. SLPB, 0x80)` để tìm vị trí của nó và dần dần tìm vị trí ban đầu lên trên.
+   Ví dụ nút ngủ của mình là _Q26, tìm "Qxx" rồi thay thế hết thành "Q26" trong SSDT-Qxx.dsl
+   Thay đổi "LPCB" thành "LPC" tuỳ theo DSDT của máy bạn trong SSDT-Qxx.dsl rồi save vào CLover/ACPI/patched
 2. Thêm patch "(SleepKey) _LID to XLID" vào config.plist/ACPI/DSDT/Patches
-   Với Dell laptop, thêm patch "(SleepKey) BTNV to XTNV" vào config.plist/ACPI/DSDT/Patches
-   Còn Thinkpad laptop, thêm patches "(SleepKey) _Q13 to XQ13" và "(SleepKey) _Q28 to XQ28" vào config.plist/ACPI/DSDT/Patches -->
+   Đổi tên _Q26 thành XQ26 trong config.plist/ACPI/DSDT/Patches
+ -->
 </blockquote>
 <p id="Sound"><strong>Sound</strong></p>
 <blockquote>

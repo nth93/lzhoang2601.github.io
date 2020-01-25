@@ -1,5 +1,5 @@
 //
-DefinitionBlock("", "SSDT", 2, "ACDT", "OCWork", 0)
+DefinitionBlock("", "SSDT", 2, "ACDT", "Dell", 0)
 {
     External (_SB.ACOS, IntObj)
     External (_SB.ACSE, IntObj)
