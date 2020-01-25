@@ -1295,7 +1295,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>(Wake) Name0D-03 to 00</string>
+				<string>(Wake) 0x0D,0x03 to 00</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -1326,7 +1326,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>(Wake) Name0D-04 to 00</string>
+				<string>(Wake) 0x0D,0x04 to 00</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -1357,7 +1357,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>(Wake) Name6D-03 to 00</string>
+				<string>(Wake) 0x6D,0x03 to 00</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -1379,7 +1379,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>(Wake) Name6D-03 to 00</string>
+				<string>(Wake) 0x6D,0x04 to 00</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
