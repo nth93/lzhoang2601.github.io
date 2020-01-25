@@ -8,14 +8,80 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>_Q11 to XQ11(LenovoAir-down)</string>
+				<string>_DSM to XDSM</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X0RTTQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WERTTQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(ALS0) ALSD._STA to ALSD.XSTA</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X1NUQQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFNUQQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(AOAC) _S3 to XS3</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X1NUQQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFNUQQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(BrightKey) KBC0 to PS2K</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				X1ExMQ==
+				S0JDMA==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -27,7 +93,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				WFExMQ==
+				UFMySw==
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -39,14 +105,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_Q12 to XQ12(LenovoAir-up)</string>
+				<string>(BrightKey) KBD0 to PS2K</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				X1ExMg==
+				S0JEMA==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -58,7 +124,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				WFExMg==
+				UFMySw==
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -70,14 +136,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>XQ14 to XQ14(TP-up)</string>
+				<string>(BrightKey) KBD_ to PS2K</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				X1ExNA==
+				S0JDXw==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -89,7 +155,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				WFExNA==
+				UFMySw==
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -101,14 +167,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_Q15 to XQ15(TP-down)</string>
+				<string>(BrightKey) _Q0E to XQ0E</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				X1ExNQ==
+				X1EwRQ==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -120,7 +186,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				WFExNQ==
+				WFEwRQ==
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -132,14 +198,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_Q39 to XQ39(LenovoPRO13-down)</string>
+				<string>(BrightKey) _Q0F to XQ0F</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				X1EzOQ==
+				X1EwRg==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -151,7 +217,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				WFEzOQ==
+				WFEwRg==
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -163,14 +229,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_Q38 to XQ38(LenovoPRO13-up)</string>
+				<string>(BrightKey) SMEE to XMEE (BRT6)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				X1EzOA==
+				U01FRQE=
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -182,7 +248,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				WFEzOA==
+				WE1FRQE=
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -194,14 +260,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>BRT6 to XRT6(dell)</string>
+				<string>(BrightKey) _Q13 to XQ13</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				QlJUNgKgC5M=
+				X1ExMw==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -213,7 +279,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				WFJUNgKgC5M=
+				WFExMw==
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -225,7 +291,989 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Name0D-03 to 00</string>
+				<string>(EC) EC to EC0</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				RUNfXw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUMwXw==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(EC) H_EC to EC0</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SF9FQw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUMwXw==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(EC) ECDV to EC0</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				RUNEVg==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUMwXw==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(EC) EC0 to EC</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				RUMwXw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUNfXw==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(EC) H_EC to EC</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SF9FQw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUNfXw==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(EC) ECDV to EC</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				RUNEVg==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUNfXw==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(GPU) GFX0 to IGPU</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				R0ZYMA==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				SUdQVQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(GPU) PCI0.VID to IGPU#1</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				UENJMFZJRF8=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				UENJMElHUFU=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(GPU) PCI0.VID to IGPU#2</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				VklEXwhfQURSDAAAAgA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				SUdQVQhfQURSDAAAAgA=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(IMEI) HECI to IMEI</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SEVDSQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				SU1FSQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(IMEI) MEI to IMEI</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				TUVJXw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				SU1FSQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(I2C) _CRS to XCRS</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X0NSUw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WENSUw==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(I2C) _STA to XSTA</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X1NUQQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFNUQQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(I2C) USTP to XSTP</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				VVNUUAg=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFNUUAg=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(I2C) SSCN to XSCN</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				U1NDTg==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFNDTg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(I2C) FMCN to XMCN</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				Rk1DTg==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WE1DTg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Thinkpad-RMCF) KBD_ to PS2K</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				S0JDXw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				UFMySw==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(LPC) LPC to LPCB</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				TFBDXw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				TFBDQg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(PTSWAK) Method(_PTS,1,N) to ZPTS</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X1BUUwE=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WlBUUwE=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(PTSWAK) Method(_PTS,1,S) to ZPTS</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X1BUUwk=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WlBUUwk=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(PTSWAK) Method(_WAK,1,N) to ZWAK</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X1dBSwE=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WldBSwE=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(PTSWAK) Method(_WAK,1,S) to ZWAK</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X1dBSwk=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WldBSwk=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(SATA) SAT0 to SATA</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				U0FUMA==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				U0FUQQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Sleep) LID0:_PRW to XPRW</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X1BSVw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFBSVw==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(SleepKey) _LID to XLID</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X0xJRAA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WExJRAA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(SleepKey) BTNV to XTNV</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				QlROVgI=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFROVgI=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(SleepKey) _Q13 to XQ13</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1ExMw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFExMw==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Sound) AZAL to HDEF</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				QVpBTA==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				SERFRg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Sound) HDAS to HDEF</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SERBUw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				SERFRg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Sound) ALZA to HDEF</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				QUxaQQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				SERFRg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Sound) CAVS to HDEF</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				Q0FWUw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				SERFRg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Sound) B0D3 to HDAU</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				QjBEMw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				SERBVQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) EHC1 to EH01</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				RUhDMQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUgwMQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) EHC2 to EH02</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				RUhDMg==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUgwMg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) EUSB to EH01</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				RVVTQg==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUgwMQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) USBE to EH02</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				VVNCRQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RUgwMg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) Method(XWAK,0,N) to ZWAK</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				WFdBSwA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WldBSwA=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) Method(XWAK,0,S) to ZWAK</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				WFdBSwg=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WldBSwg=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) Method(XSEL,0,N) to XSEZ</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				WFNFTAA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFNFWgA=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) Method(XSEL,0,S) to XSEZ</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				WFNFTAg=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFNFWgg=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) Method(ESEL,0,N) to ESEZ</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				RVNFTAA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RVNFWgA=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(USB) Method(ESEL,0,S) to ESEZ</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				RVNFTAg=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				RVNFWgg=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Wake) Method(GPRW,2,N) to XPRW</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				R1BSVwI=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFBSVwI=
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Wake) Name0D-03 to 00</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -256,7 +1304,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Name0D-04 to 00</string>
+				<string>(Wake) Name0D-04 to 00</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -279,6 +1327,116 @@
 				</data>
 				<key>ReplaceMask</key>
 				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Wake) Name6D-03 to 00</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				Cm0KAw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				Cm0KAA==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Wake) Name6D-03 to 00</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				Cm0KBA==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				Cm0KAA==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(Wake) Method(UPRW,2,N) to XPRW</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				VVBSVwpwEg==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFBSVwpwEg==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(XOSI) OSID to XSID</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				T1NJRA==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WFNJRA==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>(XOSI) _OSI to XOSI</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				X09TSQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				WE9TSQ==
 				</data>
 				<key>Skip</key>
 				<integer>0</integer>

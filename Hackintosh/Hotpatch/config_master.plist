@@ -189,7 +189,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(GPU) PCI0.VID to IGPU</string>
+					<string>(GPU) PCI0.VID to IGPU#1</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -199,7 +199,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(GPU) PCI0.VID to IGPU</string>
+					<string>(GPU) PCI0.VID to IGPU#2</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -351,16 +351,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>(Sleep)_Q13 to XQ13(TP-FnF4)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1ExMw==</data>
-					<key>Replace</key>
-					<data>WFExMw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>(Sleep) LID0:_PRW to XPRW</string>
 					<key>Disabled</key>
 					<false/>
@@ -400,16 +390,6 @@
 					<data>X1ExMw==</data>
 					<key>Replace</key>
 					<data>WFExMw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>(SleepKey) _Q28 to XQ28</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1EyQg==</data>
-					<key>Replace</key>
-					<data>WFEyQg==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -640,16 +620,6 @@
 					<data>X09TSQ==</data>
 					<key>Replace</key>
 					<data>WE9TSQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change APSS to APXX</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>QVBTUw==</data>
-					<key>Replace</key>
-					<data>QVBYWA==</data>
 				</dict>
 			</array>
 		</dict>
