@@ -214,10 +214,8 @@
 <li>Tìm “_PTS” và “_WAK” trong DSDT của máy bạn, nếu<br> Method (_PTS, 1, NotSerialized) tức Method (_PTS, 1, N)<br> Method (_PTS, 1, Serialized) tức Method (_PTS, 1, S)<br> Method (_WAK, 1, NotSerialized) tức Method (_WAK, 1, N)<br> Method (_WAK, 1, Serialized) tức Method (_WAK, 1, S)</li>
 <li>Dựa vào Method đã xác định trên, tìm kiếm các patch “(PTSWAK)…” phù hợp thêm vào config.plist/ACPI/Patches của bạn</li>
 </ol>
-</blockquote>
-<p id="PTSWAKmore"><strong>PTSWAK-Bản vá mở rộng</strong></p>
-<blockquote>
-<p>Nếu bạn gặp khó khăn trong việc đánh thức laptop sau sleep, bạn save SSDT-EXT4-WakeScreen.dsl vào Clover/APCI/patched<br>Còn nếu máy tính không shutdown được:</p>
+
+<p>Bạn gặp khó khăn trong việc đánh thức laptop sau sleep, bạn save SSDT-EXT4-WakeScreen.dsl vào Clover/APCI/patched<br> Đèn thở không trở lại bình thường sau khi Thinkpad laptop wake, save SSDT-EXT3-LedReset-TP.dsl vào Clover/ACPI/patches<br> Còn nếu máy tính không shutdown được:</p>
 <ol>
 <li>Tìm “Processor” rồi đến “SCK0” để có được kết quả</li>
 <li>Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 còn DATA của CPU là 410 thì thay 0x000 thành 0x430 trong SSDT-EXT1-Shutdown.dsl rồi save vào Clover/ACPI/patched…</li>
@@ -329,7 +327,6 @@
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#PLUG"> <span class="toc-text">PLUG</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#PNLF"> <span class="toc-text">PNLF</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#PTSWAK"> <span class="toc-text">PTSWAK</span></a></li>
-                        <li class="toc-item toc-level-1"><a class="toc-link" href="#PTSWAKmore"> <span class="toc-text">PTSWAK-Bản vá mở rộng</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#SATA"> <span class="toc-text">SATA</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#SBUS"> <span class="toc-text">SMBUS</span></a></li>
                         <li class="toc-item toc-level-1"><a class="toc-link" href="#Sleep"> <span class="toc-text">Sleep</span></a></li>

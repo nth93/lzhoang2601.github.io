@@ -1,102 +1,99 @@
 // Overriding _PTS and _WAK
-
-#ifndef NO_DEFINITIONBLOCK
-DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
+// In config ACPI, _PTS to ZPTS(1,N)
+// Find:     5F50545301
+// Replace:  5A50545301
+// or 
+// In config ACPI, _PTS to ZPTS(1,S)
+// Find:     5F50545309
+// Replace:  5A50545309
+//
+// In config ACPI, _WAK to ZWAK(1,N)
+// Find:     5F57414B01
+// Replace:  5A57414B01
+// or
+// In config ACPI, _WAK to ZWAK(1,S)
+// Find:     5F57414B09
+// Replace:  5A57414B09
+//
+DefinitionBlock("", "SSDT", 2, "ACDT", "PTSWAK", 0)
 {
-#endif
     External(ZPTS, MethodObj)
     External(ZWAK, MethodObj)
+    External(EXT1, MethodObj)
+    External(EXT2, MethodObj)
+    External(EXT3, MethodObj)
+    External(EXT4, MethodObj)
 
-    External(_SB.PCI0.PEG0.PEGP._ON, MethodObj)
-    External(_SB.PCI0.PEG0.PEGP._OFF, MethodObj)
-    External(_SB.PCI0.PEGP.DGFX._ON, MethodObj)
-    External(_SB.PCI0.PEGP.DGFX._OFF, MethodObj)
-
-    External(RMCF.DPTS, IntObj)
-    External(RMCF.SHUT, IntObj)
-    External(RMCF.XPEE, IntObj)
-    External(RMCF.SSTF, IntObj)
-    External(_SB.PCI0.XHC.PMEE, FieldUnitObj)
-    External(_SI._SST, MethodObj)
-
-    // In DSDT, native _PTS and _WAK are renamed ZPTS/ZWAK
-    // As a result, calls to these methods land here.
-    Method(_PTS, 1)
+    Scope (_SB)
     {
-        if (5 == Arg0)
+        Device (PCI9)
         {
-            // Shutdown fix, if enabled
-            If (CondRefOf(\RMCF.SHUT))
+            Name (_ADR, Zero)
+            Name (FNOK, Zero)
+            Name (MODE, Zero)
+            //
+            Name (TPTS, Zero)
+            Name (TWAK, Zero)
+            Method (_STA, 0, NotSerialized)
             {
-                If (\RMCF.SHUT & 1) { Return }
-                If (\RMCF.SHUT & 2)
+                If (_OSI ("Darwin"))
                 {
-                    OperationRegion(PMRS, SystemIO, 0x1830, 1)
-                    Field(PMRS, ByteAcc, NoLock, Preserve)
-                    {
-                        ,4,
-                        SLPE, 1,
-                    }
-                    // alternate shutdown fix using SLPE (mostly provided as an example)
-                    // likely very specific to certain motherboards
-                    Store(0, SLPE)
-                    Sleep(16)
+                    Return (0x0F)
+                }
+                Else
+                {
+                    Return (Zero)
                 }
             }
         }
-
-        If (CondRefOf(\RMCF.DPTS))
-        {
-            If (\RMCF.DPTS)
-            {
-                // enable discrete graphics
-                If (CondRefOf(\_SB.PCI0.PEG0.PEGP._ON)) { \_SB.PCI0.PEG0.PEGP._ON() }
-                If (CondRefOf(\_SB.PCI0.PEGP.DGFX._ON)) { \_SB.PCI0.PEGP.DGFX._ON() }
-            }
-        }
-
-        // call into original _PTS method
-        ZPTS(Arg0)
-
-        If (5 == Arg0)
-        {
-            // XHC.PMEE fix, if enabled
-            If (CondRefOf(\RMCF.XPEE)) { If (\RMCF.XPEE && CondRefOf(\_SB.PCI0.XHC.PMEE)) { \_SB.PCI0.XHC.PMEE = 0 } }
-        }
-    }
-    Method(_WAK, 1)
+    }   
+    
+    Method (_PTS, 1, NotSerialized) //Method (_PTS, 1, Serialized)
     {
-        // Take care of bug regarding Arg0 in certain versions of OS X...
-        // (starting at 10.8.5, confirmed fixed 10.10.2)
-        If (Arg0 < 1 || Arg0 > 5) { Arg0 = 3 }
+        If (_OSI ("Darwin"))
+        {
+            \_SB.PCI9.TPTS = Arg0
+            
+            if(\_SB.PCI9.FNOK ==1)
+            {
+                Arg0 = 3
+            }
+            If (CondRefOf(EXT1))
+            {
+                EXT1(Arg0)
+            }
+            If (CondRefOf(EXT2))
+            {
+                EXT2(Arg0)
+            }
+        }
 
-        // call into original _WAK method
+        ZPTS(Arg0)
+    }
+    
+    Method (_WAK, 1, NotSerialized) //Method (_WAK, 1, Serialized)
+    {   
+        If (_OSI ("Darwin"))
+        {
+            \_SB.PCI9.TWAK = Arg0
+            
+            if(\_SB.PCI9.FNOK ==1)
+            {
+                \_SB.PCI9.FNOK =0
+                Arg0 = 3
+            }
+            If (CondRefOf(EXT3))
+            {
+                EXT3(Arg0)
+            }
+            If (CondRefOf(EXT4))
+            {
+                EXT4(Arg0)
+            }
+        }
+
         Local0 = ZWAK(Arg0)
-
-        If (CondRefOf(\RMCF.DPTS))
-        {
-            If (\RMCF.DPTS)
-            {
-                // disable discrete graphics
-                If (CondRefOf(\_SB.PCI0.PEG0.PEGP._OFF)) { \_SB.PCI0.PEG0.PEGP._OFF() }
-                If (CondRefOf(\_SB.PCI0.PEGP.DGFX._OFF)) { \_SB.PCI0.PEGP.DGFX._OFF() }
-            }
-        }
-
-        If (CondRefOf(\RMCF.SSTF))
-        {
-            If (\RMCF.SSTF)
-            {
-                // call _SI._SST to indicate system "working"
-                // for more info, read ACPI specification
-                If (3 == Arg0 && CondRefOf(\_SI._SST)) { \_SI._SST(1) }
-            }
-        }
-
-        // return value from original _WAK
         Return (Local0)
     }
-#ifndef NO_DEFINITIONBLOCK
 }
-#endif
 //EOF
