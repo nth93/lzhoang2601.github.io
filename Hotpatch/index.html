@@ -218,13 +218,14 @@
 <ol>
 <li>Save file PTSWAK.dsl vào Clover/ACPI/patched dưới dạng .aml</li>
 <li>Tìm “_PTS” và “_WAK” trong DSDT của máy bạn, nếu<br> Method (_PTS, 1, NotSerialized) tức Method (_PTS, 1, N)<br> Method (_PTS, 1, Serialized) tức Method (_PTS, 1, S)<br> Method (_WAK, 1, NotSerialized) tức Method (_WAK, 1, N)<br> Method (_WAK, 1, Serialized) tức Method (_WAK, 1, S)</li>
-<li>Dựa vào Method đã xác định trên, tìm kiếm các patch “(PTSWAK)…” phù hợp thêm vào config.plist/ACPI/Patches của bạn<br> <br> Bạn gặp khó khăn trong việc đánh thức laptop sau sleep, bạn save SSDT-EXT4-WakeScreen.dsl vào Clover/APCI/patched<br> Đèn thở không trở lại bình thường sau khi Thinkpad laptop wake, save SSDT-EXT3-LedReset-TP.dsl vào Clover/ACPI/patches<br> Còn nếu máy tính không shutdown được:</li>
+<li>Dựa vào Method đã xác định trên, tìm kiếm các patch “(PTSWAK)…” phù hợp thêm vào config.plist/ACPI/DSDT/Patches của bạn<br> <br> Bạn gặp khó khăn trong việc đánh thức laptop sau sleep, bạn save SSDT-EXT4-WakeScreen.dsl vào Clover/APCI/patched<br> Đèn thở không trở lại bình thường sau khi Thinkpad laptop wake, save SSDT-EXT3-LedReset-TP.dsl vào Clover/ACPI/patches<br> Còn nếu máy tính không shutdown được:</li>
 <p>1. Tìm “Processor” rồi đến “SCK0” để có được kết quả<br> 2. Nếu DATA của CPU là 1810 thì thay 0x000 thành 0x1830 còn DATA của CPU là 410 thì thay 0x000 thành 0x430 trong SSDT-EXT1-Shutdown.dsl rồi save vào Clover/ACPI/patched…</p>
 </ol>
 </blockquote>
-<p id="SATA"><strong>SATA</strong></p>
+<p id="SATA"><strong>SATA (Dùng khi không nhận ổ cứng SATA)</strong></p>
 <blockquote>
-<p>Thêm SATA-100-series-unsupported.kext vào CKO nếu có pci 8086:a103 và 8086:9d03<br>Thêm SATA-200-series-unsupported.kext vào CKO nếu có pci 8086:a282<br>Thêm SATA-RAID-unsupported.kext vào CKO nếu có pci 8086:282A, 8086:2822<br>Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA thì hãy thêm AHCIinjectport.kext hoặc Sata-unsupported.kext</p>
+<li>Với các sata pci 8086:a103, 8086:9d03, 8086:a282, pci 8086:282A và 8086:2822 này bạn save SSDT-SATA vào Clover/ACPI/patched<br>Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA thì hãy thêm AHCIinjectport.kext hoặc Sata-unsupported.kext</p>
+<li>Tìm "SAT0" và "SAT1" trong DSDT của máy bạn, rồi thêm patch tương ứng vào config.plist/ACPI/DSDT/Patches</li>
 </blockquote>
 <p id="SBUS"><strong>SMBUS</strong></p>
 <blockquote>

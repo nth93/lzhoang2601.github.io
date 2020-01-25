@@ -806,6 +806,28 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>(SATA) SAT1 to SATA</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				U0FUMQ==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Replace</key>
+				<data>
+				U0FUQQ==
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>(Sleep) LID0:_PRW to XPRW</string>
 				<key>Count</key>
 				<integer>0</integer>

@@ -351,6 +351,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>(SATA) SAT1 to SATA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U0FUMQ==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>(Sleep) LID0:_PRW to XPRW</string>
 					<key>Disabled</key>
 					<false/>
