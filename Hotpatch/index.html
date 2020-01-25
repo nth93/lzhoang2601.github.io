@@ -224,8 +224,10 @@
 </blockquote>
 <p id="SATA"><strong>SATA (Dùng khi không nhận ổ cứng SATA)</strong></p>
 <blockquote>
+<ol>
 <li>Với các sata pci 8086:a103, 8086:9d03, 8086:a282, pci 8086:282A và 8086:2822 này bạn save SSDT-SATA vào Clover/ACPI/patched<br> Nếu không có pci được nhắc trên mà không nhận ổ cứng SATA thì hãy thêm AHCIinjectport.kext hoặc Sata-unsupported.kext</li>
 <li>Tìm "SAT0" và "SAT1" trong DSDT của máy bạn, rồi thêm patch tương ứng vào config.plist/ACPI/DSDT/Patches</li>
+</ol>
 </blockquote>
 <p id="SBUS"><strong>SMBUS</strong></p>
 <blockquote>
